@@ -15,7 +15,7 @@
                 "title": "Webインテリジェンス～多様な情報を知的に活用する技術～",
                 "keyword": "レコメンデーション、Human in the loop、情報可視化",
                 "youtube": "vOtxweLK1kQ",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/01_TAKAMA_YASUHUMU.jpg"
             },
             {
                 "name": "松田崇弘",
@@ -23,7 +23,7 @@
                 "title": "ドローンによる高信頼無線ネットワーク構築技術",
                 "keyword": "無線ネットワーク、ドローン、ネットワーク計測技術、 波源推定技術",
                 "youtube": "35ps_G_VEnI",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/02_MATUDA_TAKAHIRO.jpg"
             },
             {
                 "name": "片山薫",
@@ -31,7 +31,7 @@
                 "title": "三次元モデルの高精度な検索技術",
                 "keyword": "三次元データ処理、CADモデル、検索",
                 "youtube": "LIyTG4uj6Sc",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/03_KATAYAMA_KAORU.jpg"
             },
             {
                 "name": "横山昌平",
@@ -39,7 +39,7 @@
                 "title": "SNS上の地理情報を有するビッグデータの分析",
                 "keyword": "ビッグデータ、ソーシャルデータ、地理情報",
                 "youtube": "h4YhZJD0_jM",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/04_YOKOYAMA_SHOHEI.jpg"
             },
             {
                 "name": "西内信之",
@@ -47,7 +47,7 @@
                 "title": "ヒューマンインタフェースの使いやすさ・楽しさを測る",
                 "keyword": "ヒューマンインタフェース、ユーザビリティ、ユーザエクスペリエンス",
                 "youtube": "6lDeI2UJDGA",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/05_NISHIUCHI_NOBUYUKI.jpg"
             },
             {
                 "name": "山口亨",
@@ -55,7 +55,7 @@
                 "title": "コミュニティを支援する知能情報処理技術",
                 "keyword": "知能情報処理、知的ネットワーク、感性情報処理",
                 "youtube": "3q-XPSZOaec",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/06_YAMAGUCHI_TOORU.jpg"
             },
             {
                 "name": "小町守",
@@ -63,7 +63,7 @@
                 "title": "人間のように言語を操る深層学習による自然言語処理",
                 "keyword": "自然言語処理、深層学習",
                 "youtube": "ZYKH_QIyVzs",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/07_KOMACHI_MAMORU.jpg"
             },
             {
                 "name": "福井隆雄",
@@ -71,7 +71,7 @@
                 "title": "外部世界の認識・理解における身体の役割を探る",
                 "keyword": "知覚と行為の相互作用、身体化による認知、視覚運動制御、多感覚統合、3次元動作解析、視線計測",
                 "youtube": "mmjcMmnf55g",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/08_FUKUI_TAKAO.jpg"
             },
             {
                 "name": "會田雅樹",
@@ -79,7 +79,7 @@
                 "title": "情報ネットワークが生み出す「人間関係」のサイエンス",
                 "keyword": "オンラインソーシャルネットワーク、ネット炎上、エコーチェンバー効果、自律分散制御、相対論的量子力学",
                 "youtube": "UYHNn5lIY8A",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/09_AIDA_MASAKI.jpg"
             },
             {
                 "name": "小野順貴",
@@ -87,7 +87,7 @@
                 "title": "マルチメディアのための信号処理やAI技術",
                 "keyword": "画像・音声信号処理、深層学習、セキュリティ",
                 "youtube": "",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/10_ONO_NOBUTAKA.jpg"
             },
             {
                 "name": "貴家仁志",
@@ -95,7 +95,7 @@
                 "title": "混ざった音を聞き分け理解する音の信号処理と情報処理",
                 "keyword": "音源分離、音響シーン認識、マイクロフォンアレイ、音光変換、分散音響センシング、深層学習",
                 "youtube": "_KUcVAcS1cM",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/11_KIYA_HITOSHI.jpg"
             }
 
         ],
@@ -106,7 +106,7 @@
                 "title": "次世代サイバーフィジカルシステムの実現を目指して",
                 "keyword": "IoT、ネットワーク、データセントリック、ハイパーメディア処理",
                 "youtube": "hFlgMZ1n5Jo",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/01_ASAKA_TAKUYA.jpg"
             },
             {
                 "name": "開沼泰隆",
@@ -114,7 +114,7 @@
                 "title": "サプライ・チェーンの持続可能性（サスティナビリティ）と人道支援への取組み",
                 "keyword": "持続可能性（サスティナビリティ）、人道支援、サプライ・チェーン・マネジメント",
                 "youtube": "wQl8wp4mViI",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/02_KAINUMA_YASUTAKA.jpg"
             },
             {
                 "name": "梶原康博",
@@ -122,7 +122,7 @@
                 "title": "作業の自動化",
                 "keyword": "画像処理、シーケンス制御、データ解析",
                 "youtube": "tKKNRSJokkE",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/03_KAJIWARA_YASUHIRO.jpg"
             },
             {
                 "name": "福本聡",
@@ -130,7 +130,7 @@
                 "title": "頼りになるコンピュータシステムを目指して",
                 "keyword": "ディペンダブルシステム、高信頼化技術、安全・安心",
                 "youtube": "04sGUV3bX4I",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/04_FUKUMOTO_SATOSHI.jpg"
             },
             {
                 "name": "三浦幸也",
@@ -138,7 +138,7 @@
                 "title": "高信頼化情報システムの実現、人と共存する知的情報システムの実現",
                 "keyword": "ディペンダブルVLSI・システム、進化計算、機械学習",
                 "youtube": "kvbSF48ND_Y",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/05_MIURA_YUKIYA.jpg"
             },
             {
                 "name": "安田恵一郎",
@@ -146,7 +146,7 @@
                 "title": "発見的最適化アルゴリズムの構築",
                 "keyword": "システム工学、最適化、メタヒューリスティクス",
                 "youtube": "qQd4j4j4Rl8",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/06_YASUDA_KEIICHIROU.jpg"
             },
             {
                 "name": "山本久志",
@@ -154,7 +154,7 @@
                 "title": "“経営”をキーワードにし、現実のさまざまな経営に関する問題の解決を目指す",
                 "keyword": "経営工学、オペレーションズ・リサーチ、信頼性工学",
                 "youtube": "4j56zgypxIs",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/07_YAMAMOTO_HISASHI.jpg"
             },
             {
                 "name": "酒井和哉",
@@ -162,7 +162,7 @@
                 "title": "コンピュータシステムを守るセキュリティ技術",
                 "keyword": "ネットワークセキュリティ、情報セキュリティ、暗号技術",
                 "youtube": "84yj6IfJtuI",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/08_SAKAI_KAZUYA.jpg"
             },
             {
                 "name": "渋谷正弘",
@@ -170,7 +170,7 @@
                 "title": "ものづくり現場にフィットする“ハイブリッドなデジタルツインモデル”",
                 "keyword": "デジタルツイン、カイゼン、ものづくり",
                 "youtube": "5xrWneYWsGE",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/09_SHIBUYA_MASAHIRO.jpg"
             },
             {
                 "name": "相馬隆郎",
@@ -178,7 +178,7 @@
                 "title": "計算機応用工学研究室紹介",
                 "keyword": "2足歩行制御、シミュレーション、ロボット工学",
                 "youtube": "V4PeEPj1XG8",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/10_SOUMA_TAKAO.jpg"
             },
             {
                 "name": "西川清史",
@@ -186,7 +186,7 @@
                 "title": "学習によるメディア情報からの情報抽出",
                 "keyword": " 信号処理・適応学習・深層学習・機械学習",
                 "youtube": "",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/11_NISHIKAWA_KIYOSHI.jpg"
             },
             {
                 "name": "阿保真",
@@ -194,7 +194,7 @@
                 "title": "光や電波を使って手の届かない場所の環境を調べます",
                 "keyword": "レーザー、災害予測、環境計測",
                 "youtube": "XNbMI6NA_Sc",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/12_ABO_MAKOTO.jpg"
             },
             {
                 "name": "内田諭",
@@ -202,7 +202,7 @@
                 "title": "微小空間における静電気力・高電界・超音波を用いた生体・環境応用",
                 "keyword": "静電気学、センサ・計測技術、微粒子選別、生体計測、高電界・超音波処理",
                 "youtube": "curk9gGHtD4",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/13_UCHIDA_SATOSHI.jpg"
             },
             {
                 "name": "鈴木敬久",
@@ -210,7 +210,7 @@
                 "title": "「電波を見る」先進的無線システムの安全安心な利用を目指して",
                 "keyword": "EMC、電磁界測定・解析、ハイパフォーマンスコンピューティング",
                 "youtube": "kmln9tsghpk",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/14_SUZUKI_YUKIHISA.jpg"
             },
             {
                 "name": "田川憲男",
@@ -218,7 +218,7 @@
                 "title": "計測から信号処理/解析まで（画像と超音波を中心に）",
                 "keyword": "医用超音波、コンピュータビジョン",
                 "youtube": "O0NdBa3zKjs",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/15_TAGAWA_NORIO.jpg"
             },
             {
                 "name": "松井岳巳",
@@ -226,7 +226,7 @@
                 "title": "医用スクリーニングシステムの開発と臨床応用",
                 "keyword": "バイタルサイン、スクリーニング、うつ病、COVID-19",
                 "youtube": "g5hTufcPLK4",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/16_MATUI_TAKEMI.jpg"
             },
             {
                 "name": "大久保寛",
@@ -234,7 +234,7 @@
                 "title": "音響・振動・電磁計測で解き明かす波動情報処理とデータ解析",
                 "keyword": "波動情報工学、音響振動計測、電磁界計測、大規模データ解析",
                 "youtube": "AOBfu1_VGaM",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/17_OOKUBO_KANN.jpg"
             },
             {
                 "name": "坂本高秀",
@@ -242,7 +242,7 @@
                 "title": "超高速の光通信、光・電子計測、光信号処理を実現するには？",
                 "keyword": "光通信、光・電子計測、光信号処理",
                 "youtube": "Vh1nnawqJD8",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/18_SAKAMOTO_TAKAHIDE.jpg"
             },
             {
                 "name": "柴田泰邦",
@@ -250,7 +250,7 @@
                 "title": "光を使って見えないものを見る",
                 "keyword": "リモートセンシング、計測、レーザー",
                 "youtube": "UETFs3Vo6-s",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/19_SHIBATA_YASUKUNI.jpg"
             },
             {
                 "name": "須原理彦",
@@ -258,7 +258,7 @@
                 "title": "量子効果デバイス",
                 "keyword": "電子波デバイス、大容量無線通信応用、電子スピンの制御",
                 "youtube": "ArEOR-oF398",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/20_SUHARA_MICHIHIKO.jpg"
             },
             {
                 "name": "杤久保文嘉",
@@ -266,7 +266,7 @@
                 "title": "大気圧低温プラズマ",
                 "keyword": "環境浄化、表面処理、材料合成、プラズマエレクトロニクス",
                 "youtube": "HptnocB0Oc8",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/21_TOCHIKUBO_FUMIYOSHI.jpg"
             },
             {
                 "name": "三浦大介",
@@ -274,7 +274,7 @@
                 "title": "超伝導で地球のエネルギーと環境問題に挑戦しよう！",
                 "keyword": "ナノ組織制御による高性能超伝導材料、超伝導工学、磁気分離と磁気力応用",
                 "youtube": "jsqLXkFleyw",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/22_MIURA_OSUKE.jpg"
             },
             {
                 "name": "渡部泰明",
@@ -282,7 +282,7 @@
                 "title": "ハードウェアとシミュレーションを結合し、新たな工学領域をイメージする",
                 "keyword": "圧電デバイス、発振回路、生体工学",
                 "youtube": "",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/23_WATANABE_YASUAKI.jpg"
             },
             {
                 "name": "五箇繁善①",
@@ -290,7 +290,7 @@
                 "title": "超精密な時計・周波数が身近で役立つ未来へ①",
                 "keyword": "精密時間周波数、超小型原子時計、次世代インバータ用ゲート駆動システム",
                 "youtube": "fsRW_tymi80",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/24_GOKA_SHIGEYOSHI.jpg"
             },
             {
                 "name": "五箇繁善②",
@@ -298,7 +298,7 @@
                 "title": "超精密な時計・周波数が身近で役立つ未来へ②",
                 "keyword": "精密時間周波数、超小型原子時計、次世代インバータ用ゲート駆動システム",
                 "youtube": "34C6Wq-6R9c",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/24_GOKA_SHIGEYOSHI.jpg"
             },
             {
                 "name": "中村成志",
@@ -306,7 +306,7 @@
                 "title": "次世代半導体デバイスの開発",
                 "keyword": "半導体工学、加工プロセス、評価技術、MEMS、Ⅲ族窒化物半導体",
                 "youtube": "",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/25_NAKAMURA_SEIJI.jpg"
             },
             {
                 "name": "和田圭二",
@@ -314,7 +314,7 @@
                 "title": "パワーエレクトロニクス回路の高性能・高信頼化技術",
                 "keyword": "パワーエレクトロニクス、インバータ、ゲート駆動回路",
                 "youtube": "C_qOfjGukQU",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/26_WADA_KEIJI.jpg"
             }
 
         ],
@@ -324,7 +324,7 @@
                 "position": "",
                 "title": "機械システムに共通する基礎に加え、「医用工学・生体工学」や「人間工学・福祉工学」に関連する教育・研究を行います。人体を構成する細胞や臓器から、筋骨格系、身体の動きや活動まで、さまざまなレベルで工学的アプローチを生かし、「高レベルな健康の維持および医療の支援」をめざします。",
                 "keyword": "再生医工学、医用生体工学、生体シミュレーション、医療福祉機器、バイオメカニクス、リハビリテーション工学",
-                "youtube": "r_ehkts9mcc",
+                "youtube": "0_mWZf8IZls",
                 "picture": ""
             },
             {
@@ -352,7 +352,7 @@
                 "title": "極超音速旅客機を実現しよう",
                 "keyword": "航空宇宙工学、空気力学、衝撃波、空力加熱",
                 "youtube": "D-RnBiZ7CX8",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/01_OZAWA_HIROSHI.jpg"
             },
             {
                 "name": "田川俊夫",
@@ -360,7 +360,7 @@
                 "title": "流れふしぎを計算で解き明かす！",
                 "keyword": "流体、偏微分方程式、可視化",
                 "youtube": "d0FX9JTbTiE",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/02_TAGAWA_TOSHIO.jpg"
             },
             {
                 "name": "稲澤歩",
@@ -368,7 +368,7 @@
                 "title": "静かで低抵抗の航空機を目指して",
                 "keyword": "空力音、空力抵抗、熱流体",
                 "youtube": "WF2_tnRnrN0",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/03_INASAWA_AYUMU.jpg"
             },
             {
                 "name": "各務聡",
@@ -376,7 +376,7 @@
                 "title": "宇宙で自由に飛翔するために！小型ロケット推進機",
                 "keyword": "ロケット推進機、電気推進、化学推進、推力測定",
                 "youtube": "3fWGm9u4V5E",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/04_KAKAMI_AKIRA.jpg"
             },
             {
                 "name": "櫻井毅司",
@@ -384,7 +384,7 @@
                 "title": "２０年後のロケットとジェットエンジンを作る",
                 "keyword": "ロケット、ジェットエンジン、推進工学",
                 "youtube": "6ihHQE58V2s",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/05_SAKURAI_TAKASHI.jpg"
             },
             {
                 "name": "北薗幸一",
@@ -392,7 +392,7 @@
                 "title": "優れた材料はものづくりの基本です",
                 "keyword": "軽金属、セル構造体、衝撃吸収",
                 "youtube": "oj15y1vWSLI",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/06_KITAZONO_KOUICHI.jpg"
             },
             {
                 "name": "渡辺直行",
@@ -400,7 +400,7 @@
                 "title": "究極の軽量・極限環境へ挑戦する構造",
                 "keyword": "航空宇宙構造、複合材料、数値解析",
                 "youtube": "B75TP9AoOrk",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/07_WATANABE_NAOYUKI.jpg"
             },
             {
                 "name": "小島広久",
@@ -408,7 +408,7 @@
                 "title": "地球周辺環境を保全せよ",
                 "keyword": "宇宙デブリ、導電性テザー、宇宙テザーネット、宇宙ロボット",
                 "youtube": "tbMGZMwaX38",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/08_KOJIMA_HIROMASA.jpg"
             },
             {
                 "name": "武市昇",
@@ -416,7 +416,7 @@
                 "title": "社会インフラの航空宇宙システム",
                 "keyword": "将来の航空交通システム、空の移動革命、宇宙デブリ除去",
                 "youtube": "DySWj0Rykww",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/09_TAKEICHI_NOBORU.jpg"
             },
             {
                 "name": "金崎雅博",
@@ -424,7 +424,7 @@
                 "title": "超高効率な設計を行うことができる仕組みとは",
                 "keyword": "進化計算法、ベイズ最適化、超音速機、火星探査航空機",
                 "youtube": "c4UPdj6HRfE",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/10_KANAZAKI_MASAHIRO.jpg"
             },
             {
                 "name": "佐原宏典",
@@ -432,7 +432,7 @@
                 "title": "未来の宇宙を創造しよう！",
                 "keyword": "衛星システム、推進系、宇宙環境、人工流れ星",
                 "youtube": "X0FXDLrPnkM",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/11_SAHARA_HIRONORI.jpg"
             },
             {
                 "name": "石井昌憲",
@@ -440,7 +440,7 @@
                 "title": "新しい宙を見つけるために…歩きだそう！",
                 "keyword": "センシング基板技術、リモートセンシング、球観測、惑星探査、THz・光",
                 "youtube": "gVlo-DJz9hQ",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": "https://www.seeds.sd.tmu.ac.jp/assets/images/sdf2020/researchers/12_ISHII_SHOKEN.jpg"
             },
             {
                 "name": "若手研究者編",
@@ -448,7 +448,7 @@
                 "title": "空と宙の工学－助教研究紹介－",
                 "keyword": "複合材料、スペースデブリ、大型宇宙機",
                 "youtube": "YrJlglvf-Iw",
-                "picture": "//cs.sd.tmu.ac.jp/image/takama_prof.jpg"
+                "picture": ""
             }
 
         ]
