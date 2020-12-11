@@ -25,13 +25,14 @@ function onYouTubeIframeAPIReady() {
         .then(data => {
             videosLabo = data.depertment;
             videosFaculty = data.faculty;
+            /*
             const shuffle = (array) => {
                 for (let i = array.length - 1; i >= 0; i--) {
                     const j = Math.floor(Math.random() * (i + 1));
                     [array[i], array[j]] = [array[j], array[i]];
                 }
                 return array;
-            }
+            }*/
             const newPage = (faculty) => {
                 history.pushState('', '', "#" + faculty);
                 document.title = title[faculty];
@@ -51,7 +52,8 @@ function onYouTubeIframeAPIReady() {
                 });
             };
             const showLaboVideo = (faculty) => {
-                shuffle(videosLabo[faculty]).forEach((v) => {
+                /* shuffle(videosLabo[faculty]) */
+                videosLabo[faculty].forEach((v) => {
                     if (v.youtube == "") { return; }
                     let tpl = document.getElementById('card-template').querySelector('ui').cloneNode(true);
                     tpl.querySelector('.labo-video').setAttribute("x-video-id", v.youtube);
@@ -77,14 +79,14 @@ function onYouTubeIframeAPIReady() {
                     tpl.querySelector('.labo-video').addEventListener('mouseenter', e => {
                         e.stopPropagation();
                         const id = e.currentTarget.getAttribute("x-video-id");
-                        e.currentTarget.querySelector("svg #background"+id +" feGaussianBlur").setAttribute("stdDeviation","15");                        
-                        e.currentTarget.querySelector("svg #blur"+id +" feFlood").setAttribute("flood-opacity","1");
+                        e.currentTarget.querySelector("svg #background" + id + " feGaussianBlur").setAttribute("stdDeviation", "15");
+                        e.currentTarget.querySelector("svg #blur" + id + " feFlood").setAttribute("flood-opacity", "1");
                     });
                     tpl.querySelector('.labo-video').addEventListener('mouseleave', e => {
                         e.stopPropagation();
                         const id = e.currentTarget.getAttribute("x-video-id");
-                        e.currentTarget.querySelector("svg #background"+id +" feGaussianBlur").setAttribute("stdDeviation","0");
-                        e.currentTarget.querySelector("svg #blur"+id +" feFlood").setAttribute("flood-opacity","0.65");
+                        e.currentTarget.querySelector("svg #background" + id + " feGaussianBlur").setAttribute("stdDeviation", "0");
+                        e.currentTarget.querySelector("svg #blur" + id + " feFlood").setAttribute("flood-opacity", "0.65");
                     });
                     tpl.querySelector('.labo-video').addEventListener('click', (e) => {
                         e.stopPropagation();
