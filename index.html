@@ -177,7 +177,35 @@
         <div id="card-template">
             <ui class="labo">
                 <div class="labo-base">
-                    <div class="labo-video"><i class="fab fa-youtube"></i></div>
+                    <div class="labo-video">
+                        <svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xl="http://www.w3.org/1999/xlink" version="1.1">
+                            <defs>
+                                <image id="thumbnail_SVG_"
+                                    xlink:href="http://img.youtube.com/vi/mmjcMmnf55g/maxresdefault.jpg" x="0" y="0"
+                                    height="1080px" width="1920px" />
+                                    <path id="path_SVG_" fill-opacity="0" d="M1247.5,396.2c-6.9-25.7-27.2-45.9-52.8-52.8c-46.9-12.8-234.5-12.8-234.5-12.8s-187.6,0-234.5,12.3
+	c-25.2,6.9-45.9,27.6-52.8,53.3c-12.3,46.9-12.3,144.2-12.3,144.2s0,97.8,12.3,144.2c6.9,25.7,27.2,45.9,52.8,52.8
+	c47.4,12.8,234.5,12.8,234.5,12.8s187.6,0,234.5-12.3c25.7-6.9,45.9-27.2,52.8-52.8c12.3-46.9,12.3-144.2,12.3-144.2
+    S1260.3,443.1,1247.5,396.2z M900.4,630.2V450.5l156,89.9L900.4,630.2z" />
+                                <filter id="blur_SVG_">
+                                    <feFlood result="floodFill" x="0" y="0" width="100%" height="100%" flood-color="red"
+                                        flood-opacity="0.65" />
+                                    <feBlend in="SourceGraphic" in2="floodFill" result="blendOut" mode="overlay" />
+                                    <feGaussianBlur in="blendOut" stdDeviation="15"></feGaussianBlur>
+                                </filter>
+                                <filter id="background_SVG_">
+                                    <feGaussianBlur in="SourceGraphic" stdDeviation="0"></feGaussianBlur>
+                                </filter>
+                                <clipPath id="clip_SVG_">
+                                    <use xlink:href="#path_SVG_"></use>
+                                </clipPath>
+                            </defs>
+                            <use xlink:href="#thumbnail_SVG_" filter="url(#background_SVG_)"></use>
+                            <use xlink:href="#thumbnail_SVG_" clip-path="url(#clip_SVG_)" filter="url(#blur_SVG_)" />
+                            <use xlink:href="#path_SVG_" stroke="white" stroke-width="10"></use>
+                        </svg>
+                    </div>
                     <div class="labo-contents">
                         <div class="labo-title"></div>
                         <div class="labo-keyword"></div>
