@@ -8,6 +8,16 @@
         "industrialart": "LIyTG4uj6Sc"
     },
     "depertment": {
+        "sd":[
+            {
+                "name": "キャンパス紹介",
+                "position": "",
+                "title": "東京都立大学紹介ビデオ　日野キャンパス編",
+                "keyword": "システムデザイン学部を構成する五つの学科を紹介します",
+                "youtube": "nO2X7bN8S6A",
+                "picture": "https://www.tmu.ac.jp/assets/images/cmark/cmark.jpg"
+            }
+        ],
         "cs":[
             {
                 "name": "高間康史",
