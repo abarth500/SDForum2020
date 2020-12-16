@@ -37,10 +37,12 @@ function onYouTubeIframeAPIReady() {
                 history.pushState('', '', "#" + faculty);
                 document.title = title[faculty];
                 console.log(title[faculty]);
-                gtag('config', 'UA-2590074-2', {
-                    'page_title': '仮想的な学科ページタイトル',
-                    'page_path': '仮想的な学科URL'
-                });
+                if (typeof gtag != "undefined") {
+                    gtag('config', 'UA-2590074-2', {
+                        'page_title': title[faculty],
+                        'page_path': location.href
+                    });
+                }
 
             };
             const pauseAllVideo = (ignoreID = false) => {
