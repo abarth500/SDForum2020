@@ -149,8 +149,8 @@ article {
     position: fixed;
     top: 100%;
     left: 100%;
-    margin-left: calc(-2*@unit-size-pc);
-    margin-top: calc(-2*@unit-size-pc);
+    margin-left: calc(-1.7*@unit-size-pc);
+    margin-top: calc(-1.7*@unit-size-pc);
     display: inline-block;
     width: calc(1.5*@unit-size-pc);
     height: calc(1.5*@unit-size-pc);
@@ -246,8 +246,8 @@ iframe {
 
 .drawer {
     position: absolute;
-    top: calc(@unit-size-pc + @header-height-pc + @video-height-pc);
-    width: 100%;
+    //top: calc(@unit-size-pc + @header-height-pc + @video-height-pc);
+    width: 100vw;
     top: calc(@header-height-pc + @video-height-pc);
     height: @header-height-pc;
     padding-bottom: 5px;
@@ -255,22 +255,21 @@ iframe {
     z-index: 10;
     transition: 0.5s;
     .font-faculty-bold;
-
-
     div {
         background: #eee;
-        height: 100%;
+        height: 80%;
         position: relative;
-
         a {
             color: unset;
-
+            display: block;
+            height: 100%;
             span {
                 display: block;
                 position: absolute;
                 border-radius: 10px 10px 0px 0px;
-                left: 38vw;
-                width: 24vw;
+                left: 43.5vw;
+                width:14vw;
+                font-size:2vw;
                 text-align: center;
                 bottom: 0;
                 margin: 0;
@@ -602,9 +601,12 @@ article.detail {
     }
 
     .circle {
-        width: @header-height-sf;
-        height: @header-height-sf;
-        line-height: @header-height-sf;
+        margin-left: calc(-1.7*@unit-size-sf);
+        margin-top: calc(-1.7*@unit-size-sf);
+        width: calc(1.5*@unit-size-sf);
+        height: calc(1.5*@unit-size-sf);
+        font-size: calc(@unit-size-sf*0.7);
+        line-height: calc(1.5*@unit-size-sf);
     }
 
     .videocover {
@@ -795,7 +797,7 @@ body.is-preload *:after {
 /* Footer */
 
 #footer {
-    padding: 2em 0 2em 0;
+    padding: 2em;
     background-color: #f6f6f6;
 }
 

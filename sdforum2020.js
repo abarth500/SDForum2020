@@ -122,12 +122,14 @@ function onYouTubeIframeAPIReady() {
                     pagetitle = "[" + pageid[1] + "] " + title[pageid[0]];
                 }
                 console.log(title, "PAGE", pageid[0], pagetitle);
+                /*
                 if (typeof gtag != "undefined") {
                     gtag('config', 'UA-2590074-2', {
                         'page_title': pagetitle,
                         'page_path': location.href
                     });
                 }
+                */
 
             };
             const pauseAllVideo = (ignoreID = false) => {
