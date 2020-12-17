@@ -278,15 +278,7 @@ function onYouTubeIframeAPIReady() {
             document.querySelector('.circle').addEventListener('click', (e) => {
                 e.stopPropagation();
                 const $window = window.document.scrollingElement || window.document.body || window.document.documentElement;
-                anime({
-                    targets: { scroll: $window.scrollTop },
-                    scroll: 0,
-                    duration: 1000,
-                    easing: 'easeOutQuint',
-                    update: (a) => {
-                        $window.scrollTop = a.animations[0].currentValue;
-                    }
-                });
+                $window.scrollTop = 0;
             });
             document.querySelector('.video').addEventListener('click', (e) => {
                 e.stopPropagation();
