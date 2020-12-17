@@ -18,8 +18,13 @@ let tag = document.createElement('script');
 tag.src = "https://www.youtube.com/iframe_api";
 let firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
 function onYouTubeIframeAPIReady() {
     console.log("onYouTubeIframeAPIReady");
+    if (window.scrollY > 0) {
+        document.querySelector("header").classList.add("scrolled");
+        document.querySelectorAll(".drawer").forEach((e) => { e.classList.add("scrolled") });
+    }
     fetch(videoJson)
         .then(response => response.json())
         .then(data => {
@@ -136,6 +141,7 @@ function onYouTubeIframeAPIReady() {
                     } else {
                         tpl.querySelector('.labo-face').src = v.picture;
                     }
+                    console.log('section.' + faculty + ' ul.labos');
                     document.querySelector('section.' + faculty + ' ul.labos').appendChild(tpl);
                 });
             }
@@ -217,4 +223,8 @@ function onYouTubeIframeAPIReady() {
             newPage((location.hash == "") ? "sd" : location.hash.replace(/^\#/, ''));
             ready = true;
         });
+    window.addEventListener("scroll", function () {
+        document.querySelector("header").classList.toggle("scrolled", window.scrollY > 0);
+        document.querySelectorAll(".drawer").forEach((e) => { e.classList.toggle("scrolled", window.scrollY > 0) });
+    });
 }
