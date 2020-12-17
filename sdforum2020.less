@@ -142,8 +142,37 @@ article {
 }
 
 #header.scrolled {
-    opacity: 0;
+    //opacity: 0;
+    //animation: hideop .5s linear 0s;
+    //animation-fill-mode: forwards;
 }
+
+#bg.removed {
+    display: none;
+    //animation: hideop .5s linear 0s;
+    //animation-fill-mode: forwards;
+}
+
+.circle {
+    position: fixed;
+    top: 100%;
+    left: 100%;
+    margin-left: calc(-2*@unit-size-pc);
+    margin-top: calc(-2*@unit-size-pc);
+    display: inline-block;
+    width: calc(1.5*@unit-size-pc);
+    height: calc(1.5*@unit-size-pc);
+    border-radius: 50%;
+    background: @color-forum;
+    color: whitesmoke;
+    box-shadow: 0 0 0.8vw gray;
+    text-align: center;
+    font-size: calc(@unit-size-pc*0.8);
+    line-height: calc(1.5*@unit-size-pc);
+    z-index: 1000;
+    cursor: pointer;
+}
+
 
 h1 {
     font-size: 2em;
@@ -176,7 +205,8 @@ iframe {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 10000;
+    background: white;
 }
 
 .kurukuru {
@@ -220,9 +250,6 @@ iframe {
     overflow: hidden;
 }
 
-.drawer.scrolled {
-    opacity: 0 !important;
-}
 
 .drawer {
     position: absolute;
@@ -581,6 +608,11 @@ article.detail {
         }
     }
 
+    .circle {
+        width: @header-height-sf;
+        height: @header-height-sf;
+        line-height: @header-height-sf;
+    }
 
     .videocover {
         cursor: unset;
@@ -658,6 +690,10 @@ each(@colors, {
         .videoselector.@{key}:not(:checked) {
             &~.drawer.@{key} {
                 z-index:9;
+
+                //&.scrolled {
+                //    opacity: 0 !important;
+                //}
             }
         }
 
@@ -665,6 +701,10 @@ each(@colors, {
             &~.drawer.@{key} {
                 z-index:10;
 
+                //&.scrolled {
+                //    animation: hideop .5s linear 0s;
+                //    animation-fill-mode: forwards;
+                //}
             }
 
             &~#bg {
@@ -697,10 +737,11 @@ each(@colors, {
         }
 
         .drawer.@{key} {
-            background:@value;
+            color:white;
+            background:darken(@value, 30%, relative);
 
             div span {
-                background:@value;
+                background:darken(@value, 30%, relative);
             }
         }
 
@@ -911,5 +952,16 @@ body.is-preload *:after {
 @media screen and (max-width: 736px) {
     #wrapper>*>.inner {
         padding: 0 1.25em;
+    }
+}
+
+@keyframes hideop {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
     }
 }

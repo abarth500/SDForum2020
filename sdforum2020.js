@@ -21,10 +21,7 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 function onYouTubeIframeAPIReady() {
     console.log("onYouTubeIframeAPIReady");
-    if (window.scrollY > 0) {
-        document.querySelector("header").classList.add("scrolled");
-        document.querySelectorAll(".drawer").forEach((e) => { e.classList.add("scrolled") });
-    }
+
     fetch(videoJson)
         .then(response => response.json())
         .then(data => {
@@ -38,20 +35,81 @@ function onYouTubeIframeAPIReady() {
                 }
                 return array;
             }*/
+            const showHeader = (show) => {
+                if (!show) {
+                    if (document.querySelector("#header").getAttribute("x-hide") != "yes" &&
+                        document.querySelector("#header").getAttribute("x-position") != "hide") {
+                        document.querySelector("#header").setAttribute("x-hide", "yes");
+                        anime({
+                            duration: 1000,
+                            targets: '#header',
+                            opacity: [1, 0],
+                            display: ["block", "none"],
+                            complete: () => {
+                                document.querySelector("#header").setAttribute("x-hide", "no");
+                                document.querySelector("#header").setAttribute("x-position", "hide");
+                            }
+                        });
+                        anime({
+                            duration: 900,
+                            targets: '.drawer',
+                            opacity: [1, 0],
+                            display: ["block", "none"]
+                        });
+                        anime({
+                            duration: 900,
+                            targets: '.circle',
+                            opacity: [0, 1],
+                            display: ["none", "block"]
+                        });
+                    }
+                } else {
+                    if (document.querySelector("#header").getAttribute("x-show") != "yes" &&
+                        document.querySelector("#header").getAttribute("x-position") != "show") {
+                        document.querySelector("#header").setAttribute("x-show", "yes");
+                        anime({
+                            duration: 1000,
+                            targets: '#header',
+                            opacity: [0, 1],
+                            display: ["none", "block"],
+                            complete: () => {
+                                document.querySelector("#header").setAttribute("x-show", "no");
+                                document.querySelector("#header").setAttribute("x-position", "show");
+                            }
+                        });
+                        anime({
+                            duration: 900,
+                            targets: '.drawer',
+                            opacity: [0, 1],
+                            display: ["none", "block"],
+                        });
+                        anime({
+                            duration: 900,
+                            targets: '.circle',
+                            opacity: [1, 0],
+                            display: ["block", "none"]
+                        });
+                    }
+                }
+            }
             const newPage = (faculty) => {
+                let pageid = faculty.split("-");
+                let pagetitle = title[pageid[0]];
                 history.pushState('', '', "#" + faculty);
-                document.title = title[faculty];
-                console.log(title[faculty]);
+                document.title = pagetitle;
+                if (pageid.length > 1) {
+                    pagetitle = "[" + pageid[1] + "] " + title[pageid[0]];
+                }
+                console.log(title, "PAGE", pageid[0], pagetitle);
                 if (typeof gtag != "undefined") {
                     gtag('config', 'UA-2590074-2', {
-                        'page_title': title[faculty],
+                        'page_title': pagetitle,
                         'page_path': location.href
                     });
                 }
 
             };
             const pauseAllVideo = (ignoreID = false) => {
-                console.log("pause all videos");
                 Object.keys(playerFaculty).forEach((faculty) => {
                     if (typeof playerFaculty[faculty].pauseVideo == 'function' && ignoreID != faculty) {
                         playerFaculty[faculty].pauseVideo();
@@ -88,22 +146,36 @@ function onYouTubeIframeAPIReady() {
                             ele.setAttribute('clip-path', ele.getAttribute('clip-path').replace("_SVG_", v.youtube));
                         }
                     });
+                    let gBlur = null;
                     tpl.querySelector('.labo-video').addEventListener('mouseenter', e => {
                         e.stopPropagation();
                         const id = e.currentTarget.getAttribute("x-video-id");
-                        e.currentTarget.querySelector("svg #background" + id + " feGaussianBlur").setAttribute("stdDeviation", "15");
+                        //e.currentTarget.querySelector("svg #background" + id + " feGaussianBlur").setAttribute("stdDeviation", "15");
+                        if (gBlur != null) { gBlur.pause(); }
+                        gBlur = anime({
+                            targets: "svg #background" + id + " feGaussianBlur",
+                            stdDeviation: 30,
+                            duration: 10000,
+                            complete: () => { gBlur = null; }
+                        });
                         e.currentTarget.querySelector("svg #blur" + id + " feFlood").setAttribute("flood-opacity", "1");
                     });
                     tpl.querySelector('.labo-video').addEventListener('mouseleave', e => {
                         e.stopPropagation();
                         const id = e.currentTarget.getAttribute("x-video-id");
-                        e.currentTarget.querySelector("svg #background" + id + " feGaussianBlur").setAttribute("stdDeviation", "0");
+                        //e.currentTarget.querySelector("svg #background" + id + " feGaussianBlur").setAttribute("stdDeviation", "0");
+                        if (gBlur != null) { gBlur.pause(); }
+                        gBlur = anime({
+                            targets: "svg #background" + id + " feGaussianBlur",
+                            stdDeviation: 0,
+                            duration: 5000,
+                            complete: () => { gBlur = null; }
+                        });
                         e.currentTarget.querySelector("svg #blur" + id + " feFlood").setAttribute("flood-opacity", "0.65");
                     });
                     tpl.querySelector('.labo-video').addEventListener('click', (e) => {
                         e.stopPropagation();
                         const id = e.currentTarget.getAttribute("x-video-id");
-                        console.log('Click:', id);
                         if (!playerLabo.hasOwnProperty(id)) {
                             const originURL = location.protocol + '//' + location.hostname + (location.port != "" ? ":" + location.port : "");
                             playerLabo[id] = new YT.Player(id, {
@@ -141,11 +213,17 @@ function onYouTubeIframeAPIReady() {
                     } else {
                         tpl.querySelector('.labo-face').src = v.picture;
                     }
-                    console.log('section.' + faculty + ' ul.labos');
                     document.querySelector('section.' + faculty + ' ul.labos').appendChild(tpl);
                 });
+                if (window.scrollY > 0) {
+                    showHeader(false);
+                } else {
+                    showHeader(true);
+                }
+                document.getElementById("bg").classList.add("removed");
+
             }
-            let showVideo = (faculty, ignoreLaboVideo = false, callback = function () { }) => {
+            const showVideo = (faculty, ignoreLaboVideo = false, callback = function () { }) => {
                 document.querySelectorAll('.menuitem').forEach((ele) => { ele.classList.add('kurukuru') });
                 let originURL = location.protocol + '//' + location.hostname + (location.port != "" ? ":" + location.port : "");
                 playerFaculty[faculty] = new YT.Player('player_' + faculty, {
@@ -161,7 +239,6 @@ function onYouTubeIframeAPIReady() {
                             if (!ignoreLaboVideo && !opened.hasOwnProperty(faculty) && videosLabo.hasOwnProperty(faculty)) {
                                 showLaboVideo(faculty);
                                 opened[faculty] = true;
-                                console.log("showLaboVideo", "1");
                             }
                             callback();
                         },
@@ -173,6 +250,19 @@ function onYouTubeIframeAPIReady() {
                     }
                 });
             }
+            document.querySelector('.circle').addEventListener('click', (e) => {
+                e.stopPropagation();
+                const $window = window.document.scrollingElement || window.document.body || window.document.documentElement;
+                anime({
+                    targets: { scroll: $window.scrollTop },
+                    scroll: 0,
+                    duration: 1000,
+                    easing: 'easeInOutQuart',
+                    update: (a) => {
+                        $window.scrollTop = a.animations[0].currentValue;
+                    }
+                });
+            });
             document.querySelector('.video').addEventListener('click', (e) => {
                 e.stopPropagation();
                 document.querySelector('#mode').checked = !document.querySelector('#mode').checked;
@@ -188,12 +278,13 @@ function onYouTubeIframeAPIReady() {
                 });
             }, false);
             window.addEventListener('popstate', function (e) {
-                let newFaculty = (location.hash == "") ? "sd" : location.hash.replace(/^\#/, '');
+                const urlHush = location.hash.replace(/^\#/, '');
+                const newFaculty = (location.hash == "" || location.hash == "#") ? "sd" : (urlHush.split("-"))[0];
+                document.querySelector('.' + newFaculty + '[type=radio]').checked = true;
                 pauseAllVideo();
                 if (!opened.hasOwnProperty(newFaculty) && videosLabo.hasOwnProperty(newFaculty)) {
                     showLaboVideo(newFaculty);
                     opened[newFaculty] = true;
-                    console.log("showLaboVideo", "2");
                 }
                 document.querySelector('.' + newFaculty + '[type=radio]').checked = true;
             });
@@ -205,13 +296,22 @@ function onYouTubeIframeAPIReady() {
                     if (!opened.hasOwnProperty(faculty) && videosLabo.hasOwnProperty(faculty)) {
                         showLaboVideo(faculty);
                         opened[faculty] = true;
-                        console.log("showLaboVideo", "3");
                     }
                     document.querySelector('.' + faculty + '[type=radio]').checked = true;
                     pauseAllVideo();
                 });
             }, false);
-            let defFaculty = (location.hash == "") ? "sd" : location.hash.replace(/^\#/, '');
+            window.addEventListener("scroll", function (e) {
+                e.stopPropagation();
+                if (window.scrollY > 0) {
+                    showHeader(false);
+                } else if (window.scrollY == 0) {
+                    showHeader(true);
+                }
+            });
+
+            const urlHush = location.hash.replace(/^\#/, '');
+            const defFaculty = (location.hash == "" || location.hash == "#") ? "sd" : (urlHush.split("-"))[0];
             document.querySelector('.' + defFaculty + '[type=radio]').checked = true;
             showVideo(defFaculty, false, () => {
                 Object.keys(videosFaculty).forEach((faculty) => {
@@ -220,11 +320,8 @@ function onYouTubeIframeAPIReady() {
                     }
                 });
             });
-            newPage((location.hash == "") ? "sd" : location.hash.replace(/^\#/, ''));
+            newPage(defFaculty);
             ready = true;
         });
-    window.addEventListener("scroll", function () {
-        document.querySelector("header").classList.toggle("scrolled", window.scrollY > 0);
-        document.querySelectorAll(".drawer").forEach((e) => { e.classList.toggle("scrolled", window.scrollY > 0) });
-    });
+
 }
