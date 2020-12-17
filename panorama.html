@@ -5,13 +5,42 @@
     <meta charset="UTF-8">
     <title>東京都立大学日野キャンパス パノラマ</title>
     <script src="//aframe.io/releases/1.1.0/aframe.min.js"></script>
+    <script defer>
+        console.log("leoo");
+        window.addEventListener("wheel", event => {
+            const delta = Math.sign(event.wheelDelta);
+            console.log(delta);
+            //getting the mouse wheel change (120 or -120 and normalizing it to 1 or -1)
+            var mycam = document.getElementById('cam').getAttribute('camera');
+            var finalZoom = document.getElementById('cam').getAttribute('camera').zoom + delta;
+            //limiting the zoom so it doesnt zoom too much in or out
+            if (finalZoom < 1)
+                finalZoom = 1;
+            if (finalZoom > 10)
+                finalZoom = 10;
+
+            mycam.zoom = finalZoom;
+            //setting the camera element
+            document.getElementById('cam').setAttribute('camera', mycam);
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(() => {
+                document.getElementById("message").style.display = "none";
+            }, 3000);
+        }, false);
+    </script>
 </head>
 
 <body>
     <a-scene>
         <a-sky src="panorama_l.jpg" rotation="0 100 -8"> </a-sky>
-        <a-camera reverse-mouse-drag="true" position="0 0 0"></a-camera>
+        <a-camera id="cam" reverse-mouse-drag="true" position="0 0 0"></a-camera>
     </a-scene>
+    <div id="message"
+        style="background:whitesmoke;position:absolute;width:400px;height:200px;left:50%;top:50%;padding:10px;margin-left:-200px;margin-top:-100px; display: table;">
+        <span
+            style="display:table-cell;vertical-align: middle;">ドラッグで視点を変え、ホイールでズームができます。スマートフォンの方はVRボタンを押す事で、VR画像としてお楽しみいただけます。</span>
+    </div>
 </body>
 
 </html>
