@@ -282,7 +282,7 @@ function onYouTubeIframeAPIReady() {
                     targets: { scroll: $window.scrollTop },
                     scroll: 0,
                     duration: 1000,
-                    easing: 'easeInOutQuart',
+                    easing: 'easeOutQuint',
                     update: (a) => {
                         $window.scrollTop = a.animations[0].currentValue;
                     }
