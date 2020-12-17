@@ -35,59 +35,80 @@ function onYouTubeIframeAPIReady() {
                 }
                 return array;
             }*/
+            let animeHeader = { "header": null, "drawer": null, up: null };
             const showHeader = (show) => {
                 if (!show) {
                     if (document.querySelector("#header").getAttribute("x-hide") != "yes" &&
                         document.querySelector("#header").getAttribute("x-position") != "hide") {
                         document.querySelector("#header").setAttribute("x-hide", "yes");
-                        anime({
+                        if (animeHeader.header != null) { animeHeader.header.pause(); }
+                        animeHeader.header = anime({
                             duration: 1000,
                             targets: '#header',
                             opacity: [1, 0],
                             display: ["block", "none"],
                             complete: () => {
+                                animeHeader.header = null;
                                 document.querySelector("#header").setAttribute("x-hide", "no");
                                 document.querySelector("#header").setAttribute("x-position", "hide");
                             }
                         });
-                        anime({
+                        if (animeHeader.drawer != null) { animeHeader.drawer.pause(); }
+                        animeHeader.drawer = anime({
                             duration: 900,
                             targets: '.drawer',
                             opacity: [1, 0],
-                            display: ["block", "none"]
+                            display: ["block", "none"],
+                            complete: () => {
+                                animeHeader.drawer = null;
+                            }
                         });
-                        anime({
+                        if (animeHeader.up != null) { animeHeader.up.pause(); }
+                        animeHeader.up = anime({
                             duration: 900,
                             targets: '.circle',
                             opacity: [0, 1],
-                            display: ["none", "block"]
+                            display: ["none", "block"],
+                            complete: () => {
+                                animeHeader.up = null;
+                            }
                         });
                     }
                 } else {
                     if (document.querySelector("#header").getAttribute("x-show") != "yes" &&
                         document.querySelector("#header").getAttribute("x-position") != "show") {
                         document.querySelector("#header").setAttribute("x-show", "yes");
-                        anime({
+                        if (animeHeader.header != null) { animeHeader.header.pause(); }
+                        animeHeader.header = anime({
                             duration: 1000,
                             targets: '#header',
                             opacity: [0, 1],
                             display: ["none", "block"],
                             complete: () => {
+                                animeHeader.header = null;
                                 document.querySelector("#header").setAttribute("x-show", "no");
                                 document.querySelector("#header").setAttribute("x-position", "show");
                             }
                         });
-                        anime({
+                        if (animeHeader.drawer != null) { animeHeader.drawer.pause(); }
+                        animeHeader.drawer = anime({
                             duration: 900,
                             targets: '.drawer',
                             opacity: [0, 1],
                             display: ["none", "block"],
+                            complete: () => {
+                                animeHeader.drawer = null;
+                            }
                         });
-                        anime({
+                        if (animeHeader.up != null) { animeHeader.up.pause(); }
+                        animeHeader.up = anime({
                             duration: 900,
                             targets: '.circle',
                             opacity: [1, 0],
-                            display: ["block", "none"]
+                            display: ["block", "none"],
+                            complete: () => {
+                                animeHeader.up = null;
+                            }
                         });
                     }
                 }
@@ -239,6 +260,8 @@ function onYouTubeIframeAPIReady() {
                             if (!ignoreLaboVideo && !opened.hasOwnProperty(faculty) && videosLabo.hasOwnProperty(faculty)) {
                                 showLaboVideo(faculty);
                                 opened[faculty] = true;
+                            }else{
+                                document.getElementById("bg").classList.add("removed");
                             }
                             callback();
                         },
