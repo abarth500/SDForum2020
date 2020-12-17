@@ -37,7 +37,6 @@
 }
 
 @title-font: degular-display, sans-serif;
-;
 @faculty-font: noto-sans-cjk-jp, sans-serif;
 @base-font: noto-sans-cjk-jp, sans-serif;
 
@@ -141,16 +140,9 @@ article {
     }
 }
 
-#header.scrolled {
-    //opacity: 0;
-    //animation: hideop .5s linear 0s;
-    //animation-fill-mode: forwards;
-}
 
 #bg.removed {
     display: none;
-    //animation: hideop .5s linear 0s;
-    //animation-fill-mode: forwards;
 }
 
 .circle {
@@ -170,6 +162,7 @@ article {
     font-size: calc(@unit-size-pc*0.7);
     line-height: calc(1.5*@unit-size-pc);
     z-index: 1000;
+    user-select: none;
     cursor: pointer;
 }
 
