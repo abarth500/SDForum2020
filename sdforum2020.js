@@ -131,7 +131,6 @@ function onYouTubeIframeAPIReady() {
                 if (pageid.length > 1) {
                     pagetitle = "[" + pageid[1] + "] " + title[pageid[0]];
                 }
-                console.log(title, "PAGE", pageid[0], pagetitle);
                 /*
                 if (typeof gtag != "undefined") {
                     gtag('config', 'UA-2590074-2', {
