@@ -238,19 +238,16 @@ iframe {
     //top: calc(@unit-size-pc + @header-height-pc + @video-height-pc);
     width: 100%;
     top: calc(@header-height-pc + @video-height-pc);
-    height: @header-height-pc;
-    padding-bottom: 5px;
+    height: calc(@header-height-pc * 2);
+    padding-bottom: calc(@header-height-pc *1.5);
     overflow: hidden;
     z-index: 10;
     transition: 0.5s;
     .font-faculty-bold;
 
-    //&.active{
-    //    z-index:11;
-    //}
     div {
         background: #eee;
-        height: 80%;
+        height: calc(@header-height-pc*0.5);
         position: relative;
 
         a {
@@ -263,13 +260,13 @@ iframe {
                 position: absolute;
                 border-radius: 10px 10px 0px 0px;
                 left: 43.5vw;
-                width: 14vw;
-                font-size: 2vw;
+                width: 200px;
+                font-size: 20px;
                 text-align: center;
                 bottom: 0;
                 margin: 0;
                 margin-bottom: -10px;
-                padding: 0em 1em 0em 1em;
+                padding: 0em 20px 0em 20px;
                 cursor: pointer;
                 user-select: none;
             }
@@ -573,6 +570,50 @@ article.detail {
 
     article.detail>section ui.labo {
         width: 100%;
+    }
+
+    .drawer {
+        position: absolute;
+        //top: calc(@unit-size-pc + @header-height-pc + @video-height-pc);
+        width: 100%;
+        top: calc(@header-height-sf + @video-height-sf);
+        height: calc(@header-height-sf * 2);
+        padding-bottom: calc(@header-height-sf *1.5);
+        overflow: hidden;
+        z-index: 10;
+        transition: 0.5s;
+        .font-faculty-bold;
+
+        //&.active{
+        //    z-index:11;
+        //}
+        div {
+            background: #eee;
+            height: 80%;
+            position: relative;
+
+            a {
+                color: unset;
+                display: block;
+                height: 100%;
+
+                span {
+                    display: block;
+                    position: absolute;
+                    border-radius: 10px 10px 0px 0px;
+                    left: 43.5vw;
+                    width: 14vw;
+                    font-size: 2vw;
+                    text-align: center;
+                    bottom: 0;
+                    margin: 0;
+                    margin-bottom: -10px;
+                    padding: 0em 1em 0em 1em;
+                    cursor: pointer;
+                    user-select: none;
+                }
+            }
+        }
     }
 
     .drawer {
@@ -917,6 +958,7 @@ body.is-preload *:after {
     #footer {
         &>.inner {
             flex-direction: column;
+
             &>.copyright {
                 margin-top: 3em;
             }
@@ -931,12 +973,14 @@ body.is-preload *:after {
 @media screen and (max-width: 480px) {
     #footer>.inner>.copyright {
         margin-top: 3em;
+
         li {
             border-left: 0;
             padding-left: 0;
             margin: 0.75em 0 0 0;
             display: block;
             line-height: inherit;
+
             &:first-child {
                 margin-top: 0;
             }
