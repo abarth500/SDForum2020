@@ -34,199 +34,197 @@
 <body>
     <a name="sd"></a><a name="cs"></a><a name="eecs"></a><a name="mech"></a><a name="aerospace"></a><a
         name="industrialart"></a>
-    <div id="wrapper">
-        <header id="header" x-hide="no" x-show="no" x-position="unknownS">
-            <div class="inner">
-                <!-- Logo -->
-                <img src="tmu_logo.png" alt="東京都立大学" width="200" />
-                <span class="title"><a href="#sd">システムデザインフォーラム2020</a></span>
-            </div>
-        </header>
+    <header id="header" x-hide="no" x-show="no" x-position="unknownS">
+        <div class="inner">
+            <!-- Logo -->
+            <img class="logo" src="tmu_logo.png" alt="東京都立大学">
+            <span class="title"><a href="#sd">システムデザインフォーラム2020</a></span>
+        </div>
+    </header>
 
-        <div id="wrapp-outer">
-            <div id="bg"></div>
-            <input type="checkbox" id="mode" class="hiddeninput" checked>
-            <input type="radio" name="videoselector" class="hiddeninput videoselector sd" checked>
-            <input type="radio" name="videoselector" class="hiddeninput videoselector cs">
-            <input type="radio" name="videoselector" class="hiddeninput videoselector eecs">
-            <input type="radio" name="videoselector" class="hiddeninput videoselector mech">
-            <input type="radio" name="videoselector" class="hiddeninput videoselector aerospace">
-            <input type="radio" name="videoselector" class="hiddeninput videoselector industrialart">
-            <div id="wrapp">
-                <div id="title"><a href="#sd">SYSTEMS DESIGN FORUM 2020 ONLINE</a></div>
-                <div class="menuitem sd" x-item="sd"><i class="fa fa-youtube-play" aria-hidden="true"></i> 学部紹介</div>
-                <div class="menuitem cs" x-item="cs"><i class="fa fa-youtube-play" aria-hidden="true"></i> 情報科学科</div>
-                <div class="menuitem eecs" x-item="eecs"><i class="fa fa-youtube-play" aria-hidden="true"></i>
-                    電子情報システム工学科</div>
-                <div class="menuitem mech" x-item="mech"><i class="fa fa-youtube-play" aria-hidden="true"></i> 機械システム工学科
-                </div>
-                <div class="menuitem aerospace" x-item="aerospace"><i class="fa fa-youtube-play" aria-hidden="true"></i>
-                    航空宇宙システム工学科</div>
-                <div class="menuitem industrialart" x-item="industrialart"><i class="fa fa-youtube-play"
-                        aria-hidden="true"></i> インダストリアルアート学科</div>
-                <div class="video">
-                    <div id="player_sd" class="videoitem sd"></div>
-                    <div id="player_cs" class="videoitem cs"></div>
-                    <div id="player_eecs" class="videoitem eecs"></div>
-                    <div id="player_mech" class="videoitem mech"></div>
-                    <div id="player_aerospace" class="videoitem aerospace"></div>
-                    <div id="player_industrialart" class="videoitem industrialart"></div>
-                    <div class="videocover"></div>
-                    <div class="videoclose"><i class="fas fa-chevron-circle-right"></i>閉じる</div>
-                </div>
+    <div id="wrapp-outer">
+        <div id="bg"></div>
+        <input type="checkbox" id="mode" class="hiddeninput" checked>
+        <input type="radio" name="videoselector" class="hiddeninput videoselector sd" checked>
+        <input type="radio" name="videoselector" class="hiddeninput videoselector cs">
+        <input type="radio" name="videoselector" class="hiddeninput videoselector eecs">
+        <input type="radio" name="videoselector" class="hiddeninput videoselector mech">
+        <input type="radio" name="videoselector" class="hiddeninput videoselector aerospace">
+        <input type="radio" name="videoselector" class="hiddeninput videoselector industrialart">
+        <div id="wrapp">
+            <div id="title"><a href="#sd">SYSTEMS DESIGN FORUM 2020 ONLINE</a></div>
+            <div class="menuitem sd" x-item="sd"><i class="fa fa-youtube-play" aria-hidden="true"></i> 学部紹介</div>
+            <div class="menuitem cs" x-item="cs"><i class="fa fa-youtube-play" aria-hidden="true"></i> 情報科学科</div>
+            <div class="menuitem eecs" x-item="eecs"><i class="fa fa-youtube-play" aria-hidden="true"></i>
+                電子情報システム工学科</div>
+            <div class="menuitem mech" x-item="mech"><i class="fa fa-youtube-play" aria-hidden="true"></i> 機械システム工学科
             </div>
-            <div class="drawer sd active">
-                <div><a href="#sd-detail"><span>もっと見る</span></a></div>
+            <div class="menuitem aerospace" x-item="aerospace"><i class="fa fa-youtube-play" aria-hidden="true"></i>
+                航空宇宙システム工学科</div>
+            <div class="menuitem industrialart" x-item="industrialart"><i class="fa fa-youtube-play"
+                    aria-hidden="true"></i> インダストリアルアート学科</div>
+            <div class="video">
+                <div id="player_sd" class="videoitem sd"></div>
+                <div id="player_cs" class="videoitem cs"></div>
+                <div id="player_eecs" class="videoitem eecs"></div>
+                <div id="player_mech" class="videoitem mech"></div>
+                <div id="player_aerospace" class="videoitem aerospace"></div>
+                <div id="player_industrialart" class="videoitem industrialart"></div>
+                <div class="videocover"></div>
+                <div class="videoclose"><i class="fas fa-chevron-circle-right"></i>閉じる</div>
             </div>
-            <div class="drawer cs">
-                <div><a href="#cs-detail"><span>もっと見る</span></a></div>
-            </div>
-            <div class="drawer eecs">
-                <div><a href="#eecs-detail"><span>もっと見る</span></a></div>
-            </div>
-            <div class="drawer mech">
-                <div><a href="#mech-detail"><span>もっと見る</span></a></div>
-            </div>
-            <div class="drawer aerospace">
-                <div><a href="#aerospace-detail"><span>もっと見る</span></a></div>
-            </div>
-            <div class="drawer industrialart">
-                <div><a href="#industrialart-detail"><span>もっと見る</span></a></div>
-            </div>
-            <article class="detail">
-                <section class="sd">
-                    <a name="sd-detail"></a>
-                    <h1>東京都立大学 システムデザイン学部</h1>
-                    <div class="panoramabanner">
-                        <a-scene vr-mode-ui="enabled: false" embedded>
-                            <a-sky src="panorama_s.jpg" rotation="0 100 -8"> </a-sky>
-                            <a-camera reverse-mouse-drag="true" fov="50" position="0 0 0" animation="property: rotation;
+        </div>
+        <div class="drawer sd active">
+            <div><a href="#sd-detail"><span>もっと見る</span></a></div>
+        </div>
+        <div class="drawer cs">
+            <div><a href="#cs-detail"><span>もっと見る</span></a></div>
+        </div>
+        <div class="drawer eecs">
+            <div><a href="#eecs-detail"><span>もっと見る</span></a></div>
+        </div>
+        <div class="drawer mech">
+            <div><a href="#mech-detail"><span>もっと見る</span></a></div>
+        </div>
+        <div class="drawer aerospace">
+            <div><a href="#aerospace-detail"><span>もっと見る</span></a></div>
+        </div>
+        <div class="drawer industrialart">
+            <div><a href="#industrialart-detail"><span>もっと見る</span></a></div>
+        </div>
+        <article class="detail">
+            <section class="sd">
+                <a name="sd-detail"></a>
+                <h1>東京都立大学 システムデザイン学部</h1>
+                <div class="panoramabanner">
+                    <a-scene vr-mode-ui="enabled: false" embedded>
+                        <a-sky src="panorama_s.jpg" rotation="0 100 -8"> </a-sky>
+                        <a-camera reverse-mouse-drag="true" fov="50" position="0 0 0" animation="property: rotation;
 															from: 0 0 0;
 															to: 0 360 0;
 															dur: 300000;
 															loop: true;
 															easing: linear"></a-camera>
-                        </a-scene>
-                    </div>
-                    <div class="panoramalink">[<a target="_blank" href="panorama.html">超高解像度でキャンパスを覗いてみる</a>]</div>
-                    <h2>システムデザインフォーラムとは</h2>
-                    <section>
-                        <p>
-                            東京都立大学システムデザイン学部・同大学院システムデザイン研究科では、研究活動及び成果並びに学科（コース）・学域間で分野横断的に行っている研究活動について学内外に広く紹介するとともに、産学公及び地域連携の可能性を見出すことを目的として、2007年から『システムデザインフォーラム』を開催しております。
-                            今年度のシステムデザインフォーラム2020は、COVID-19の影響を鑑み、オンライン開催として多くのコンテンツを公開致します。
-                            学部PR動画では当学部・研究科が「新しいライフスタイルの提案」とこれを実現するためのSTEAM（Science＋Technology＋Engineering＋Arts＋Mathematics）教育を目指していることを表明致しました。施設紹介動画では、本学日野キャンパス及び南大沢キャンパスにある当学部・研究科に関連した施設・実験室をご紹介致します。
-                            各学科の紹介動画ではそれぞれの学科の特色や研究内容の概要をご紹介するとともに、それぞれの学科に所属する研究室・領域についてさらに詳しい紹介動画を用意致しました。
-                            これらをご覧頂き、「新しいライフスタイルの提案」を目指す当学部・研究科をより身近に感じて頂くとともに、産学連携のご提案、また将来の技術者・研究者の学びの場としてのご選択を賜りましたら幸いに存じます。
-
-                        </p>
-                    </section>
-                    <h2>学部紹介</h2>
-                    <section>
-                        <p>
-                            本学部の最大の特徴は、現在の都市社会に必要なシステムだけでなく次世代や近未来の実現を目指す様々なシステムを、数理的、システム工学的なアプローチはもちろんのこと、人間の感性を重視したデザイン工学的なアプローチからも総合的に教育研究するという点です。
-                        </p>
-                        <p>
-                            5つの学科は、それぞれが独自性を持って特徴的な専門教育を行っていますが、様々な要素技術・研究成果が総合された複合システムの設計・開発には、個々の知識だけでなく、関連した多くの分野の総合的な知識やノウハウ、さらには、それらを統合化する技術が必要となります。そのために、本学部では、各学科の専門分野に限定されることなく、学科間の緩やかな連携による教育研究体制により周辺分野の知識も含めた学際・横断的教育を受けることができる仕組みを整備しています。
-                        </p>
-
-                    </section>
-                    <h2>施設紹介</h2>
-                    <section>
-                        <ul class="labos">
-                        </ul>
-                    </section>
-                </section>
-                <section class="cs">
-                    <a name="cs-detail"></a>
-                    <h1>情報科学科</h1>
-                    <section>
-                        <p>
-                            現代社会において、情報技術は世界中のあらゆる分野で用いられ、歴史上4回目の「産業革命」と呼ばれるほどの変化を引き起こしています。19世紀半ばまでは土木工学中心の時代でしたが、20世紀に入るまでには機械工学が発展し、第一次世界大戦で電気工学や化学工学、そして第二次世界大戦で原子力工学が役割を拡大させていきました。21世紀を迎え、インターネットの拡大や計算機の高度化、人工知能やマルチメディア・ソーシャルメディアの急速な進展を経つつ、ビッグデータの時代が到来しましたが、これらは皆、情報技術の成果と言えます。新技術が世界各地に日進月歩で登場する一方で、社会的なリスク要因は多様化する傾向にあります。そうした未知の状況に日々直面する中でも、情報技術を駆使することによって将来を見据えた的確な決断を行い、グローバルに活躍できる人材の養成が急務となっています。情報科学科では、このような変化の激しい時代に柔軟に適応し、高度な情報技術に熟達した、国際的に活躍できるソフトウェアエンジニアを育成することをめざしています。
-                        </p>
-                    </section>
-                    <section>
-                        <h2>研究室紹介</h2>
-                        <ul class="labos">
-                        </ul>
-                    </section>
-                </section>
-                <section class="eecs">
-                    <a name="eecs-detail"></a>
-                    <h1>電子情報システム工学科</h1>
-                    <section>
-                        <p>
-                            近年の国勢調査によれば、わが国における技術者の種類別割合では「情報系技術者」が最も多く、次いで「電気・電子・通信系技術者」が多いとされています。しかも、このふたつを合わせると、全技術者の半数を上回る比率を占めるという結果になります。まさに、情報系と電気電子通信系は、この国の社会と産業の維持・発展に必要不可欠な技術分野であるといえるでしょう。
-                        </p>
-                        <p>
-                            こうした背景を踏まえて、電子情報システム工学科では、「情報システムコース」と「電気通信システムコース」のふたつの教育課程を設置しました。情報技術分野と電気電子通信技術分野は密接に関係しており、特に、両者の境界・融合領域として通信系技術が位置づけられます。本学科では、「情報ネットワークシステム領域」、「通信システム領域」、「エネルギー情報システム領域」の3つを教育・研究体系の主要な柱と考え、情報システムコースでは情報ネットワークシステム領域と通信システム領域を中心とした学びの体系を、また、電気通信システムコースでは通信システム領域とエネルギー情報システム領域を中心とした学びの体系を提供します。現在および未来の社会・産業の要請に応えうる、情報システム技術や電気電子通信システム技術の素養と実践力をソフトウェアからハードウェアまで幅広く身につけ、それらの技術を融合した新たな技術を創生できる「底力」のある技術者・研究者を育みます。
-                        </p>
-                    </section>
-                    <section>
-                        <h2>研究室紹介</h2>
-                        <ul class="labos">
-                        </ul>
-                    </section>
-                </section>
-                <section class="mech">
-                    <a name="mech-detail">
-                        <h1>機械システム工学科</h1>
-                        <section>
-                            <p>
-                                安全・安心で持続可能な社会を構築し、高レベルな健康維持および医療支援を実現するために、これらの目的に関連する多様で複雑な問題を解決し、高い付加価値を生み出し、社会を快適化するための機械システムが求められています。そのようなシステムの開発には、システム工学、制御工学、ロボット工学、設計工学、生体工学、マイクロ・ナノテクノロジなどの学問領域を主体とする広範な知識と教養を有するとともに、それらを横断的な視点から活用できる人材が不可欠となってきています。本学科では上記の学問領域の基礎を教育することにより、求められる理想社会を構築する機械システムを創り出すことのできる創造性豊かな人材を育成します。
-                            </p>
-                        </section>
-                        <section>
-                            <h2>研究室紹介</h2>
-                            <ul class="labos">
-                            </ul>
-                        </section>
-                </section>
-                <section class="aerospace">
-                    <a name="aerospace-detail">
-                        <h1>航空宇宙システム工学科</h1>
-                        <section>
-                            <p>
-                                人類は20世紀初頭から空と宇宙を目指し，今日までにあらゆる航空宇宙システムを実現してきました。今日では、飛行機に乗って遠い海外まで簡単に行けるようになり、テレビやネットで正確な天気予報を見たりスマホで地図を見ながらGPSを使ったりするという、ありふれた日常生活においても人工衛星が不可欠となっています。そして最近では、小型人工衛星やドローンが急速に普及しつつあり、今後これらを活用した新たな世の中が訪れようとしています。このように航空宇宙システム工学は、これまでも、そしてこれからも人類の幸福な社会の構築に貢献し未来を拓き続ける学問分野です。
-                            </p>
-                            <p>
-                                航空宇宙システム工学は、航空機・ロケット・人工衛星といった航空宇宙システムを創造し、それらを高度12,000m以上の上空や宇宙空間のような極限環境でも高い信頼性で性能良く機能するよう設計・製造し、そしてより広く人類社会で利活用することを探求する先進的な総合工学です。当然、その学びの場には最先端領域の知識と技術、それらを支える実験・実習設備が必要です。本学科は、遷・超音速風洞、ジェットエンジン、小型ロケットエンジン、真空チャンバー、模擬無重力実験装置、高温度疲労試験装置、騒音・振動試験用クロージング、フライトシミュレータなど豊富な実験装置を所有しています。そして幅広い学問分野を俯瞰する教員陣がそれらを活用し、工学的な諸問題を総合的に捉えて解決する能力を学生が修得できるよう教授します。また、宇宙航空研究開発機構、情報通信研究機構、海上・港湾・航空技術研究所と連携し、学外研究者による講義を開講するとともに、希望する学生はこれらの研究所で研究指導を受けることができます。また、鳥人間コンテスト、学生室内飛行ロボットコンテスト、衛星設計コンテストへの出場なども積極的に支援しています。本学科では、学生の皆さんがそのチャレンジ精神を存分に発揮できることでしょう。
-                            </p>
-                        </section>
-                        <section>
-                            <h2>研究室紹介</h2>
-                            <ul class="labos">
-                            </ul>
-                        </section>
-                </section>
-                <section class="industrialart">
-                    <a name="industrialart-detail">
-                        <h1>インダストリアルアート学科</h1>
-                        <p>
-                            インダストリアルに続く言葉といえば、「デザイン」を連想する人が多いのではないでしょうか。21世紀はデザインの時代。その認識に異論はありません。しかし、工業意匠と訳され、工業製品の商品性を高める手段と捉えられがちなインダストリアルデザインでは、取り組みは限定されてしまいます。デザインという言葉では伝えきれない大きな思いを込めて、あえて「インダストリアルアート」を名乗ります。それはたとえば、新しい価値観で都市の未来を創造し、計画する力、新時代を築くイノベーションの原動力と言い換えることができると思います。
-                        </p>
-                        <p>
-                            人の心を揺さぶるアートやデザインは、そんな力を育む格好の教材です。インダストリアルアート学科では、プロダクトやメディアといった人に訴えかけるアート・デザインの学修に加えて、人の行動や意識をデザインに生かす人間工学を重視します。あわせて、デザイン資源を生活や社会・産業などに活かすためのリサーチ・企画・プロデュース・編集方法を、ワークショップなどのプログラムを通して体験的に学び、感じる心、成し遂げる技術を育みます。
-                        </p>
-                        <section>
-                            <h2>研究室紹介</h2>
-                            インターストリアルアート学科は、<a href="https://industrial-art.sd.tmu.ac.jp/sdf2020/">こちらの特設会場<i
-                                    class="fas fa-external-link-alt"></i></a>にて研究室紹介を行っております。
-                        </section>
-                </section>
-            </article>
-            <div id="btnSUp" class="circle"><i class="fas fa-level-up-alt"></i></div>
-            <footer id="footer">
-                <div class="inner">
-                    <ul class="copyright">
-                        <li>© <a href="//www.tmu.ac.jp">東京都立大学</a> <a href="//www.sd.tmu.ac.jp">システムデザイン学部</a></li>
-                        <li>システムデザインフォーラム2020 事務局 （東京都立大学日野キャンパス広報担当） </li>
-                        <li>〒191-0065 東京都日野市旭が丘6-6 Tel：042-585-8613　Fax：042-583-5119 E-mail：sd-forum-ml [at] tmu.ac.jp
-                        </li>
-                        <li>公開期間：2020年12月21日から2021年3月31日まで</li>
-                    </ul>
+                    </a-scene>
                 </div>
-            </footer>
-        </div>
+                <div class="panoramalink">[<a target="_blank" href="panorama.html">超高解像度でキャンパスを覗いてみる</a>]</div>
+                <h2>システムデザインフォーラムとは</h2>
+                <section>
+                    <p>
+                        東京都立大学システムデザイン学部・同大学院システムデザイン研究科では、研究活動及び成果並びに学科（コース）・学域間で分野横断的に行っている研究活動について学内外に広く紹介するとともに、産学公及び地域連携の可能性を見出すことを目的として、2007年から『システムデザインフォーラム』を開催しております。
+                        今年度のシステムデザインフォーラム2020は、COVID-19の影響を鑑み、オンライン開催として多くのコンテンツを公開致します。
+                        学部PR動画では当学部・研究科が「新しいライフスタイルの提案」とこれを実現するためのSTEAM（Science＋Technology＋Engineering＋Arts＋Mathematics）教育を目指していることを表明致しました。施設紹介動画では、本学日野キャンパス及び南大沢キャンパスにある当学部・研究科に関連した施設・実験室をご紹介致します。
+                        各学科の紹介動画ではそれぞれの学科の特色や研究内容の概要をご紹介するとともに、それぞれの学科に所属する研究室・領域についてさらに詳しい紹介動画を用意致しました。
+                        これらをご覧頂き、「新しいライフスタイルの提案」を目指す当学部・研究科をより身近に感じて頂くとともに、産学連携のご提案、また将来の技術者・研究者の学びの場としてのご選択を賜りましたら幸いに存じます。
+
+                    </p>
+                </section>
+                <h2>学部紹介</h2>
+                <section>
+                    <p>
+                        本学部の最大の特徴は、現在の都市社会に必要なシステムだけでなく次世代や近未来の実現を目指す様々なシステムを、数理的、システム工学的なアプローチはもちろんのこと、人間の感性を重視したデザイン工学的なアプローチからも総合的に教育研究するという点です。
+                    </p>
+                    <p>
+                        5つの学科は、それぞれが独自性を持って特徴的な専門教育を行っていますが、様々な要素技術・研究成果が総合された複合システムの設計・開発には、個々の知識だけでなく、関連した多くの分野の総合的な知識やノウハウ、さらには、それらを統合化する技術が必要となります。そのために、本学部では、各学科の専門分野に限定されることなく、学科間の緩やかな連携による教育研究体制により周辺分野の知識も含めた学際・横断的教育を受けることができる仕組みを整備しています。
+                    </p>
+
+                </section>
+                <h2>施設紹介</h2>
+                <section>
+                    <ul class="labos">
+                    </ul>
+                </section>
+            </section>
+            <section class="cs">
+                <a name="cs-detail"></a>
+                <h1>情報科学科</h1>
+                <section>
+                    <p>
+                        現代社会において、情報技術は世界中のあらゆる分野で用いられ、歴史上4回目の「産業革命」と呼ばれるほどの変化を引き起こしています。19世紀半ばまでは土木工学中心の時代でしたが、20世紀に入るまでには機械工学が発展し、第一次世界大戦で電気工学や化学工学、そして第二次世界大戦で原子力工学が役割を拡大させていきました。21世紀を迎え、インターネットの拡大や計算機の高度化、人工知能やマルチメディア・ソーシャルメディアの急速な進展を経つつ、ビッグデータの時代が到来しましたが、これらは皆、情報技術の成果と言えます。新技術が世界各地に日進月歩で登場する一方で、社会的なリスク要因は多様化する傾向にあります。そうした未知の状況に日々直面する中でも、情報技術を駆使することによって将来を見据えた的確な決断を行い、グローバルに活躍できる人材の養成が急務となっています。情報科学科では、このような変化の激しい時代に柔軟に適応し、高度な情報技術に熟達した、国際的に活躍できるソフトウェアエンジニアを育成することをめざしています。
+                    </p>
+                </section>
+                <section>
+                    <h2>研究室紹介</h2>
+                    <ul class="labos">
+                    </ul>
+                </section>
+            </section>
+            <section class="eecs">
+                <a name="eecs-detail"></a>
+                <h1>電子情報システム工学科</h1>
+                <section>
+                    <p>
+                        近年の国勢調査によれば、わが国における技術者の種類別割合では「情報系技術者」が最も多く、次いで「電気・電子・通信系技術者」が多いとされています。しかも、このふたつを合わせると、全技術者の半数を上回る比率を占めるという結果になります。まさに、情報系と電気電子通信系は、この国の社会と産業の維持・発展に必要不可欠な技術分野であるといえるでしょう。
+                    </p>
+                    <p>
+                        こうした背景を踏まえて、電子情報システム工学科では、「情報システムコース」と「電気通信システムコース」のふたつの教育課程を設置しました。情報技術分野と電気電子通信技術分野は密接に関係しており、特に、両者の境界・融合領域として通信系技術が位置づけられます。本学科では、「情報ネットワークシステム領域」、「通信システム領域」、「エネルギー情報システム領域」の3つを教育・研究体系の主要な柱と考え、情報システムコースでは情報ネットワークシステム領域と通信システム領域を中心とした学びの体系を、また、電気通信システムコースでは通信システム領域とエネルギー情報システム領域を中心とした学びの体系を提供します。現在および未来の社会・産業の要請に応えうる、情報システム技術や電気電子通信システム技術の素養と実践力をソフトウェアからハードウェアまで幅広く身につけ、それらの技術を融合した新たな技術を創生できる「底力」のある技術者・研究者を育みます。
+                    </p>
+                </section>
+                <section>
+                    <h2>研究室紹介</h2>
+                    <ul class="labos">
+                    </ul>
+                </section>
+            </section>
+            <section class="mech">
+                <a name="mech-detail">
+                    <h1>機械システム工学科</h1>
+                    <section>
+                        <p>
+                            安全・安心で持続可能な社会を構築し、高レベルな健康維持および医療支援を実現するために、これらの目的に関連する多様で複雑な問題を解決し、高い付加価値を生み出し、社会を快適化するための機械システムが求められています。そのようなシステムの開発には、システム工学、制御工学、ロボット工学、設計工学、生体工学、マイクロ・ナノテクノロジなどの学問領域を主体とする広範な知識と教養を有するとともに、それらを横断的な視点から活用できる人材が不可欠となってきています。本学科では上記の学問領域の基礎を教育することにより、求められる理想社会を構築する機械システムを創り出すことのできる創造性豊かな人材を育成します。
+                        </p>
+                    </section>
+                    <section>
+                        <h2>研究室紹介</h2>
+                        <ul class="labos">
+                        </ul>
+                    </section>
+            </section>
+            <section class="aerospace">
+                <a name="aerospace-detail">
+                    <h1>航空宇宙システム工学科</h1>
+                    <section>
+                        <p>
+                            人類は20世紀初頭から空と宇宙を目指し，今日までにあらゆる航空宇宙システムを実現してきました。今日では、飛行機に乗って遠い海外まで簡単に行けるようになり、テレビやネットで正確な天気予報を見たりスマホで地図を見ながらGPSを使ったりするという、ありふれた日常生活においても人工衛星が不可欠となっています。そして最近では、小型人工衛星やドローンが急速に普及しつつあり、今後これらを活用した新たな世の中が訪れようとしています。このように航空宇宙システム工学は、これまでも、そしてこれからも人類の幸福な社会の構築に貢献し未来を拓き続ける学問分野です。
+                        </p>
+                        <p>
+                            航空宇宙システム工学は、航空機・ロケット・人工衛星といった航空宇宙システムを創造し、それらを高度12,000m以上の上空や宇宙空間のような極限環境でも高い信頼性で性能良く機能するよう設計・製造し、そしてより広く人類社会で利活用することを探求する先進的な総合工学です。当然、その学びの場には最先端領域の知識と技術、それらを支える実験・実習設備が必要です。本学科は、遷・超音速風洞、ジェットエンジン、小型ロケットエンジン、真空チャンバー、模擬無重力実験装置、高温度疲労試験装置、騒音・振動試験用クロージング、フライトシミュレータなど豊富な実験装置を所有しています。そして幅広い学問分野を俯瞰する教員陣がそれらを活用し、工学的な諸問題を総合的に捉えて解決する能力を学生が修得できるよう教授します。また、宇宙航空研究開発機構、情報通信研究機構、海上・港湾・航空技術研究所と連携し、学外研究者による講義を開講するとともに、希望する学生はこれらの研究所で研究指導を受けることができます。また、鳥人間コンテスト、学生室内飛行ロボットコンテスト、衛星設計コンテストへの出場なども積極的に支援しています。本学科では、学生の皆さんがそのチャレンジ精神を存分に発揮できることでしょう。
+                        </p>
+                    </section>
+                    <section>
+                        <h2>研究室紹介</h2>
+                        <ul class="labos">
+                        </ul>
+                    </section>
+            </section>
+            <section class="industrialart">
+                <a name="industrialart-detail">
+                    <h1>インダストリアルアート学科</h1>
+                    <p>
+                        インダストリアルに続く言葉といえば、「デザイン」を連想する人が多いのではないでしょうか。21世紀はデザインの時代。その認識に異論はありません。しかし、工業意匠と訳され、工業製品の商品性を高める手段と捉えられがちなインダストリアルデザインでは、取り組みは限定されてしまいます。デザインという言葉では伝えきれない大きな思いを込めて、あえて「インダストリアルアート」を名乗ります。それはたとえば、新しい価値観で都市の未来を創造し、計画する力、新時代を築くイノベーションの原動力と言い換えることができると思います。
+                    </p>
+                    <p>
+                        人の心を揺さぶるアートやデザインは、そんな力を育む格好の教材です。インダストリアルアート学科では、プロダクトやメディアといった人に訴えかけるアート・デザインの学修に加えて、人の行動や意識をデザインに生かす人間工学を重視します。あわせて、デザイン資源を生活や社会・産業などに活かすためのリサーチ・企画・プロデュース・編集方法を、ワークショップなどのプログラムを通して体験的に学び、感じる心、成し遂げる技術を育みます。
+                    </p>
+                    <section>
+                        <h2>研究室紹介</h2>
+                        インターストリアルアート学科は、<a href="https://industrial-art.sd.tmu.ac.jp/sdf2020/">こちらの特設会場<i
+                                class="fas fa-external-link-alt"></i></a>にて研究室紹介を行っております。
+                    </section>
+            </section>
+        </article>
+        <div id="btnSUp" class="circle"><i class="fas fa-level-up-alt"></i></div>
+        <footer id="footer">
+            <div class="inner">
+                <ul class="copyright">
+                    <li>© <a href="//www.tmu.ac.jp">東京都立大学</a> <a href="//www.sd.tmu.ac.jp">システムデザイン学部</a></li>
+                    <li>システムデザインフォーラム2020 事務局 （東京都立大学日野キャンパス広報担当） </li>
+                    <li>〒191-0065 東京都日野市旭が丘6-6 Tel：042-585-8613　Fax：042-583-5119 E-mail：sd-forum-ml [at] tmu.ac.jp
+                    </li>
+                    <li>公開期間：2020年12月21日から2021年3月31日まで</li>
+                </ul>
+            </div>
+        </footer>
     </div>
 
     <div style="display:none">
