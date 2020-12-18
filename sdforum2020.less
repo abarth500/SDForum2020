@@ -231,6 +231,7 @@ iframe {
     border-radius: 10px;
     overflow: hidden;
     z-index: 15;
+    max-width:100%;
 }
 
 .drawer {
@@ -574,7 +575,7 @@ article.detail {
 
     .drawer {
         top: calc(@header-height-sf + calc(@video-height-sf*2));
-        height: calc(@header-height-sf * 3);
+        height: calc(@header-height-sf * 2);
         padding-bottom: calc(@header-height-sf *1.5);
         div {
             a {
@@ -756,7 +757,7 @@ each(@colors, {
             color:white;
             background:darken(@value, 30%, relative);
 
-            div span {
+            div a,span {
                 background:darken(@value, 30%, relative);
             }
         }
@@ -970,4 +971,8 @@ body.is-preload *:after {
         opacity: 0;
         display: none;
     }
+}
+
+.detail{
+    visibility:hidden;
 }

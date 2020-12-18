@@ -36,11 +36,31 @@ function onYouTubeIframeAPIReady() {
                 return array;
             }*/
             let animeHeader = { "header": null, "drawer": null, up: null };
+            const isElementVisible = (el)=> {
+                var rect     = el.getBoundingClientRect(),
+                    vWidth   = window.innerWidth || doc.documentElement.clientWidth,
+                    vHeight  = window.innerHeight || doc.documentElement.clientHeight,
+                    efp      = function (x, y) { return document.elementFromPoint(x, y) };     
+            
+                // Return false if it's not in the viewport
+                if (rect.right < 0 || rect.bottom < 0 
+                        || rect.left > vWidth || rect.top > vHeight)
+                    return false;
+            
+                // Return true if any of its four corners are visible
+                return (
+                      el.contains(efp(rect.left,  rect.top))
+                  ||  el.contains(efp(rect.right, rect.top))
+                  ||  el.contains(efp(rect.right, rect.bottom))
+                  ||  el.contains(efp(rect.left,  rect.bottom))
+                );
+            }
             const showHeader = (show) => {
                 if (!show) {
                     if (document.querySelector("#header").getAttribute("x-hide") != "yes" &&
                         document.querySelector("#header").getAttribute("x-position") != "hide") {
                         document.querySelector("#header").setAttribute("x-hide", "yes");
+                        document.querySelector(".detail").style.visibility  = "visible";
                         if (animeHeader.header != null) { animeHeader.header.pause(); }
                         animeHeader.header = anime({
                             duration: 500,
@@ -83,6 +103,7 @@ function onYouTubeIframeAPIReady() {
                         document.querySelector("#header").getAttribute("x-position") != "show") {
                         document.querySelector("#header").setAttribute("x-show", "yes");
                         if (animeHeader.header != null) { animeHeader.header.pause(); }
+                        document.querySelector(".detail").style.visibility  = "hidden";
                         animeHeader.header = anime({
                             duration: 1000,
                             targets: '#header',
@@ -121,7 +142,7 @@ function onYouTubeIframeAPIReady() {
                     }
                 }
             }
-            const newPage = (faculty) => {
+            const newPage = (faculty) => {                
                 let pageid = faculty.split("-");
                 let pagetitle = title[pageid[0]];
                 document.querySelectorAll(".drawer.active").forEach((e) => { e.classList.remove("active") });
