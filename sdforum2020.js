@@ -43,7 +43,7 @@ function onYouTubeIframeAPIReady() {
                         document.querySelector("#header").setAttribute("x-hide", "yes");
                         if (animeHeader.header != null) { animeHeader.header.pause(); }
                         animeHeader.header = anime({
-                            duration: 1000,
+                            duration: 500,
                             targets: '#header',
                             opacity: [1, 0],
                             //display: ["block", "none"],
@@ -56,7 +56,7 @@ function onYouTubeIframeAPIReady() {
                         });
                         if (animeHeader.drawer != null) { animeHeader.drawer.pause(); }
                         animeHeader.drawer = anime({
-                            duration: 900,
+                            duration: 400,
                             targets: '.drawer',
                             opacity: [1, 0],
                             //display: ["block", "none"],
@@ -67,7 +67,7 @@ function onYouTubeIframeAPIReady() {
                         });
                         if (animeHeader.up != null) { animeHeader.up.pause(); }
                         animeHeader.up = anime({
-                            duration: 900,
+                            duration: 1000,
                             targets: '#btnSUp',
                             opacity: [0, 1],
                             //display: ["none", "block"],
