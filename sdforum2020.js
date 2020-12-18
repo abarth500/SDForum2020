@@ -46,11 +46,12 @@ function onYouTubeIframeAPIReady() {
                             duration: 1000,
                             targets: '#header',
                             opacity: [1, 0],
-                            display: ["block", "none"],
+                            //display: ["block", "none"],
                             complete: () => {
                                 animeHeader.header = null;
                                 document.querySelector("#header").setAttribute("x-hide", "no");
                                 document.querySelector("#header").setAttribute("x-position", "hide");
+                                document.querySelector("#header").style.display = "none";
                             }
                         });
                         if (animeHeader.drawer != null) { animeHeader.drawer.pause(); }
@@ -58,20 +59,23 @@ function onYouTubeIframeAPIReady() {
                             duration: 900,
                             targets: '.drawer',
                             opacity: [1, 0],
-                            display: ["block", "none"],
+                            //display: ["block", "none"],
                             complete: () => {
                                 animeHeader.drawer = null;
+                                document.querySelectorAll(".drawer").forEach((e) => { e.style.display = "none"; });
                             }
                         });
                         if (animeHeader.up != null) { animeHeader.up.pause(); }
                         animeHeader.up = anime({
                             duration: 900,
-                            targets: '.circle',
+                            targets: '#btnSUp',
                             opacity: [0, 1],
-                            display: ["none", "block"],
+                            //display: ["none", "block"],
                             complete: () => {
                                 animeHeader.up = null;
-                            }
+
+                            },
+                            begin: () => { document.querySelector("#btnSUp").style.display = "block"; }
                         });
                     }
                 } else {
@@ -83,31 +87,35 @@ function onYouTubeIframeAPIReady() {
                             duration: 1000,
                             targets: '#header',
                             opacity: [0, 1],
-                            display: ["none", "block"],
+                            //display: ["none", "block"],
                             complete: () => {
                                 animeHeader.header = null;
                                 document.querySelector("#header").setAttribute("x-show", "no");
                                 document.querySelector("#header").setAttribute("x-position", "show");
-                            }
+                            },
+                            begin: () => { document.querySelector("#header").style.display = "block"; }
                         });
                         if (animeHeader.drawer != null) { animeHeader.drawer.pause(); }
                         animeHeader.drawer = anime({
                             duration: 900,
                             targets: '.drawer',
                             opacity: [0, 1],
-                            display: ["none", "block"],
+                            //display: ["none", "block"],
                             complete: () => {
                                 animeHeader.drawer = null;
+                            }, begin: () => {
+                                document.querySelectorAll(".drawer").forEach((e) => { e.style.display = "block"; });
                             }
                         });
                         if (animeHeader.up != null) { animeHeader.up.pause(); }
                         animeHeader.up = anime({
                             duration: 900,
-                            targets: '.circle',
+                            targets: '#btnSUp',
                             opacity: [1, 0],
                             display: ["block", "none"],
                             complete: () => {
                                 animeHeader.up = null;
+                                document.querySelector("#btnSUp").style.display = "none";
                             }
                         });
                     }
@@ -116,6 +124,8 @@ function onYouTubeIframeAPIReady() {
             const newPage = (faculty) => {
                 let pageid = faculty.split("-");
                 let pagetitle = title[pageid[0]];
+                document.querySelectorAll(".drawer.active").forEach((e) => { e.classList.remove("active") });
+                document.querySelector(".drawer." + pageid[0]).classList.add("active");
                 history.pushState('', '', "#" + faculty);
                 document.title = pagetitle;
                 if (pageid.length > 1) {
@@ -262,7 +272,7 @@ function onYouTubeIframeAPIReady() {
                             if (!ignoreLaboVideo && !opened.hasOwnProperty(faculty) && videosLabo.hasOwnProperty(faculty)) {
                                 showLaboVideo(faculty);
                                 opened[faculty] = true;
-                            }else{
+                            } else {
                                 document.getElementById("bg").classList.add("removed");
                             }
                             callback();
@@ -275,7 +285,7 @@ function onYouTubeIframeAPIReady() {
                     }
                 });
             }
-            document.querySelector('.circle').addEventListener('click', (e) => {
+            document.querySelector('#btnSUp').addEventListener('click', (e) => {
                 e.stopPropagation();
                 const $window = window.document.scrollingElement || window.document.body || window.document.documentElement;
                 $window.scrollTop = 0;

@@ -101,6 +101,11 @@ article {
     overflow: hidden;
     z-index: 10;
     transition: 0.5s;
+
+    a {
+        text-decoration: unset;
+        color: unset;
+    }
 }
 
 #header .logo {
@@ -217,6 +222,11 @@ iframe {
     height: @header-height-pc;
     line-height: @header-height-pc;
     text-align: center;
+
+    a {
+        text-decoration: unset;
+        color: unset;
+    }
 }
 
 #wrapp-outer {
@@ -255,25 +265,31 @@ iframe {
     z-index: 10;
     transition: 0.5s;
     .font-faculty-bold;
+    //&.active{
+    //    z-index:11;
+    //}
     div {
         background: #eee;
         height: 80%;
         position: relative;
+
         a {
             color: unset;
             display: block;
             height: 100%;
+
             span {
                 display: block;
                 position: absolute;
                 border-radius: 10px 10px 0px 0px;
                 left: 43.5vw;
-                width:14vw;
-                font-size:2vw;
+                width: 14vw;
+                font-size: 2vw;
                 text-align: center;
                 bottom: 0;
                 margin: 0;
-                padding: .7em 1em .2em 1em;
+                margin-bottom: -10px;
+                padding: 0em 1em 0em 1em;
                 cursor: pointer;
                 user-select: none;
             }
@@ -684,7 +700,7 @@ each(@colors, {
         //個別ビデオ選択時
         .videoselector.@{key}:not(:checked) {
             &~.drawer.@{key} {
-                z-index:9;
+                z-index:10;
 
                 //&.scrolled {
                 //    opacity: 0 !important;
@@ -694,7 +710,7 @@ each(@colors, {
 
         .videoselector.@{key}:checked {
             &~.drawer.@{key} {
-                z-index:10;
+                z-index:11;
 
                 //&.scrolled {
                 //    animation: hideop .5s linear 0s;
