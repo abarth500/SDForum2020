@@ -36,23 +36,23 @@ function onYouTubeIframeAPIReady() {
                 return array;
             }*/
             let animeHeader = { "header": null, "drawer": null, up: null };
-            const isElementVisible = (el)=> {
-                var rect     = el.getBoundingClientRect(),
-                    vWidth   = window.innerWidth || doc.documentElement.clientWidth,
-                    vHeight  = window.innerHeight || doc.documentElement.clientHeight,
-                    efp      = function (x, y) { return document.elementFromPoint(x, y) };     
-            
+            const isElementVisible = (el) => {
+                var rect = el.getBoundingClientRect(),
+                    vWidth = window.innerWidth || doc.documentElement.clientWidth,
+                    vHeight = window.innerHeight || doc.documentElement.clientHeight,
+                    efp = function (x, y) { return document.elementFromPoint(x, y) };
+
                 // Return false if it's not in the viewport
-                if (rect.right < 0 || rect.bottom < 0 
-                        || rect.left > vWidth || rect.top > vHeight)
+                if (rect.right < 0 || rect.bottom < 0
+                    || rect.left > vWidth || rect.top > vHeight)
                     return false;
-            
+
                 // Return true if any of its four corners are visible
                 return (
-                      el.contains(efp(rect.left,  rect.top))
-                  ||  el.contains(efp(rect.right, rect.top))
-                  ||  el.contains(efp(rect.right, rect.bottom))
-                  ||  el.contains(efp(rect.left,  rect.bottom))
+                    el.contains(efp(rect.left, rect.top))
+                    || el.contains(efp(rect.right, rect.top))
+                    || el.contains(efp(rect.right, rect.bottom))
+                    || el.contains(efp(rect.left, rect.bottom))
                 );
             }
             const showHeader = (show) => {
@@ -60,7 +60,7 @@ function onYouTubeIframeAPIReady() {
                     if (document.querySelector("#header").getAttribute("x-hide") != "yes" &&
                         document.querySelector("#header").getAttribute("x-position") != "hide") {
                         document.querySelector("#header").setAttribute("x-hide", "yes");
-                        document.querySelector(".detail").style.visibility  = "visible";
+                        document.querySelector(".detail").style.visibility = "visible";
                         if (animeHeader.header != null) { animeHeader.header.pause(); }
                         animeHeader.header = anime({
                             duration: 500,
@@ -103,7 +103,7 @@ function onYouTubeIframeAPIReady() {
                         document.querySelector("#header").getAttribute("x-position") != "show") {
                         document.querySelector("#header").setAttribute("x-show", "yes");
                         if (animeHeader.header != null) { animeHeader.header.pause(); }
-                        document.querySelector(".detail").style.visibility  = "hidden";
+                        document.querySelector(".detail").style.visibility = "hidden";
                         animeHeader.header = anime({
                             duration: 1000,
                             targets: '#header',
@@ -142,7 +142,7 @@ function onYouTubeIframeAPIReady() {
                     }
                 }
             }
-            const newPage = (faculty) => {                
+            const newPage = (faculty) => {
                 let pageid = faculty.split("-");
                 let pagetitle = title[pageid[0]];
                 document.querySelectorAll(".drawer.active").forEach((e) => { e.classList.remove("active") });
@@ -184,7 +184,7 @@ function onYouTubeIframeAPIReady() {
                     iframe.id = v.youtube;
                     tpl.querySelector('.labo-video').appendChild(iframe);
                     tpl.querySelector('.labo-video svg image').setAttributeNS('http://www.w3.org/1999/xlink', 'href', "https://img.youtube.com/vi/" + v.youtube + "/maxresdefault.jpg");
-                    let eles = tpl.querySelectorAll('.labo-video svg *');
+                    let eles = tpl.querySelectorAll('.labo svg *');
                     eles.forEach((ele) => {
                         if (ele.id) {
                             ele.id = ele.id.replace("_SVG_", v.youtube);
@@ -252,19 +252,23 @@ function onYouTubeIframeAPIReady() {
                             });
                         }
                     });
-                    tpl.querySelector('.labo-name').innerText = v.name;
-                    tpl.querySelector('.labo-position').innerText = v.position;
+                    //tpl.querySelector('.labo-name').innerText = v.name;
+                    //tpl.querySelector('.labo-position').innerText = v.position;
+                    tpl.querySelector('.labo-name').textContent = v.name;
+                    tpl.querySelector('.labo-position').textContent = v.position;
                     tpl.querySelector('.labo-title').innerText = v.title;
                     tpl.querySelector('.labo-keyword').innerText = v.keyword;
                     if (v.picture == "") {
-                        const dammyFace = document.createElement("i");
+                        /*const dammyFace = document.createElement("i");
                         dammyFace.classList.add("fas");
                         dammyFace.classList.add("fa-users");
                         dammyFace.classList.add("labo-face");
                         tpl.querySelector('img.labo-face').after(dammyFace);
-                        tpl.querySelector('img.labo-face').style.display = "none";
+                        tpl.querySelector('img.labo-face').style.display = "none";*/
                     } else {
-                        tpl.querySelector('.labo-face').src = v.picture;
+                        //tpl.querySelector('.labo-face').src = v.picture;
+                        tpl.querySelector('.labo-prof svg image').setAttributeNS('http://www.w3.org/1999/xlink', 'href', v.picture);
+                        tpl.querySelector('.labo-prof svg image').style.display = "block";
                     }
                     document.querySelector('section.' + faculty + ' ul.labos').appendChild(tpl);
                 });
@@ -370,5 +374,4 @@ function onYouTubeIframeAPIReady() {
             newPage(defFaculty);
             ready = true;
         });
-
 }
