@@ -9,12 +9,21 @@
 @wrap-height-pc: calc(@unit-size-pc + @video-height-pc);
 @menu-height-pc: calc(@video-height-pc / @n-depertment );
 
+@video-width-sf: calc(90vw);
+@video-height-sf: calc((@video-width-sf/16) * 9);
+@unit-size-sf: calc(@video-height-sf / @n-depertment);
+@header-height-sf: calc(@unit-size-sf);
+@wrap-height-sf: calc(@unit-size-sf + (2* @video-height-sf));
+@menu-height-sf: calc(@video-height-sf / @n-depertment);
+
+/*
 @unit-size-sf: calc(100vh / 23);
 @header-height-sf: calc(@unit-size-sf*2);
 @video-width-sf: calc(@unit-size-sf * 16);
 @video-height-sf: calc(@unit-size-sf * 9);
 @wrap-height-sf: calc(@unit-size-sf + (2* @video-height-sf));
 @menu-height-sf: calc(@video-height-sf / @n-depertment );
+*/
 
 @color-forum: #393e4f;
 
@@ -231,7 +240,7 @@ iframe {
     border-radius: 10px;
     overflow: hidden;
     z-index: 15;
-    max-width:100%;
+    max-width: 100%;
 }
 
 .drawer {
@@ -577,12 +586,13 @@ article.detail {
         top: calc(@header-height-sf + calc(@video-height-sf*2));
         height: calc(@header-height-sf * 2);
         padding-bottom: calc(@header-height-sf *1.5);
+
         div {
             a {
                 span {
                     display: block;
                     position: unset;
-                    text-align:center;
+                    text-align: center;
                     width: 100%;
                     font-size: 1em;
                     bottom: 0;
@@ -595,6 +605,7 @@ article.detail {
             }
         }
     }
+
     #header {
         height: @header-height-sf; //pcsize
 
@@ -757,7 +768,7 @@ each(@colors, {
             color:white;
             background:@value;
 
-            div a,span {
+            div a, span {
                 background:@value;
             }
         }
@@ -925,6 +936,6 @@ body.is-preload *:after {
     }
 }
 
-.detail{
-    visibility:hidden;
+.detail {
+    visibility: hidden;
 }
