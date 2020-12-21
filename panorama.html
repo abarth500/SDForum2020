@@ -16,8 +16,8 @@
             //limiting the zoom so it doesnt zoom too much in or out
             if (finalZoom < 1)
                 finalZoom = 1;
-            if (finalZoom > 10)
-                finalZoom = 10;
+            if (finalZoom > 20)
+                finalZoom = 20;
 
             mycam.zoom = finalZoom;
             //setting the camera element
@@ -39,7 +39,7 @@
     <div id="message"
         style="background:whitesmoke;position:absolute;width:400px;height:200px;left:50%;top:50%;padding:10px;margin-left:-200px;margin-top:-100px; display: table;">
         <span
-            style="display:table-cell;vertical-align: middle;">ドラッグで視点を変え、ホイールでズームができます。スマートフォンの方はVRボタンを押す事で、VR画像としてお楽しみいただけます。</span>
+            style="display:table-cell;vertical-align: middle;">画像の読み込み完了まで少々お待ちください。360度画像は、pCの場合はドラッグとホイールで視点が変えられます。</span>
     </div>
 </body>
 

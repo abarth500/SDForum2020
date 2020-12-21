@@ -180,6 +180,7 @@ function onYouTubeIframeAPIReady() {
                     if (v.youtube == "") { return; }
                     let tpl = document.getElementById('card-template').querySelector('ui').cloneNode(true);
                     tpl.querySelector('.labo-video').setAttribute("x-video-id", v.youtube);
+                    tpl.querySelector('.labo-video').setAttribute("x-video-type", v.type);
                     const iframe = document.createElement("div");
                     iframe.id = v.youtube;
                     tpl.querySelector('.labo-video').appendChild(iframe);
@@ -229,27 +230,34 @@ function onYouTubeIframeAPIReady() {
                     tpl.querySelector('.labo-video').addEventListener('click', (e) => {
                         e.stopPropagation();
                         const id = e.currentTarget.getAttribute("x-video-id");
+                        const equirectangular = (e.currentTarget.getAttribute("x-video-type") == "equirectangular");
+                        const ua = window.navigator.userAgent.toLowerCase();
+                        const isiOS = ua.indexOf('iphone') > -1 || ua.indexOf('ipad') > -1 || ua.indexOf('macintosh') > -1 && 'ontouchend' in document;
                         if (!playerLabo.hasOwnProperty(id)) {
-                            const originURL = location.protocol + '//' + location.hostname + (location.port != "" ? ":" + location.port : "");
-                            playerLabo[id] = new YT.Player(id, {
-                                videoId: id,
-                                width: "600px",
-                                playerVars: {
-                                    rel: 0,
-                                    'enablejsapi': 1,
-                                    'origin': originURL
-                                },
-                                events: {
-                                    'onReady': (evt) => {
-                                        evt.target.playVideo();
+                            if (equirectangular && isiOS) {
+                                location.href = "https://youtu.be/" + id;
+                            } else {
+                                const originURL = location.protocol + '//' + location.hostname + (location.port != "" ? ":" + location.port : "");
+                                playerLabo[id] = new YT.Player(id, {
+                                    videoId: id,
+                                    width: "600px",
+                                    playerVars: {
+                                        rel: 0,
+                                        'enablejsapi': 1,
+                                        'origin': originURL
                                     },
-                                    'onStateChange': (evt) => {
-                                        if (evt.data == 1) {
-                                            pauseAllVideo(id);
+                                    events: {
+                                        'onReady': (evt) => {
+                                            evt.target.playVideo();
+                                        },
+                                        'onStateChange': (evt) => {
+                                            if (evt.data == 1) {
+                                                pauseAllVideo(id);
+                                            }
                                         }
                                     }
-                                }
-                            });
+                                });
+                            }
                         }
                     });
                     //tpl.querySelector('.labo-name').innerText = v.name;
