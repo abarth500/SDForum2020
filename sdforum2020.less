@@ -85,7 +85,7 @@
 }
 
 html body {
-    .font-base;
+    .font-base();
     margin: 0;
     font-size: calc(16px + .4vw);
     color: #585858;
@@ -206,7 +206,7 @@ iframe {
     user-select: none;
     background: @color-forum;
     color: #c7c7c7;
-    .font-title;
+    .font-title();
     font-size: 2vw;
     letter-spacing: 0.25em;
     height: @header-height-pc;
@@ -253,7 +253,7 @@ iframe {
     overflow: hidden;
     z-index: 10;
     transition: 0.5s;
-    .font-faculty-bold;
+    .font-faculty-bold();
 
     div {
         background: @color-forum;
@@ -293,7 +293,7 @@ iframe {
     line-height: @menu-height-pc;
     font-size: calc(@unit-size-pc * 0.4);
     letter-spacing: 0.125em;
-    .font-faculty;
+    .font-faculty();
 
     span {
         height: @menu-height-pc;
@@ -429,7 +429,7 @@ article.detail {
         }
 
         h1 {
-            .font-faculty-bold;
+            .font-faculty-bold();
             font-size: 1.5em;
             letter-spacing: 0.25em;
             text-align: center;
@@ -441,7 +441,7 @@ article.detail {
         h4,
         h5,
         h6 {
-            .font-faculty-bold;
+            .font-faculty-bold();
             letter-spacing: 0.25em;
             text-align: center;
         }
